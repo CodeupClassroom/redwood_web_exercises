@@ -21,6 +21,28 @@
                 * directories are containers
 * Git workflow
 * HTML Overview
-    * Elements are containers
+    * Elements are containers (grammar)
         * Elements can have either more elements or text (text nodes)
+        * Types of elements 
+            * Block level -> div, p, h1, h6
+            * Inline elements -> strong, em, span
+            * Void elements -> br, meta, hr
+        * Rules
+            * block within block (valid)
+            * inline within inline (valid)
+            * inline within block (valid)
+            * are void elements block elements (some of them -> br, hr)
+            * block within inline (invalid)
+        * Attributes (describe elements)
+            * examples: class, id, src, href
+            * required: a -> href
+            * optional: p -> class
     * Without errors vs Valid
+        * well-formed documents (syntax)
+            * Have a correct syntax
+        * mal-formed documents (syntax errors)
+            * A non-void element must have a closing
+    * Valid document/Invalid document
+        * https://validator.w3.org/
+        * Follow the rules defined by the doctype
+    
