@@ -21,4 +21,6 @@
                 * directories are containers
 * Git workflow
 * HTML Overview
+    * Elements are containers
+        * Elements can have either more elements or text (text nodes)
     * Without errors vs Valid
