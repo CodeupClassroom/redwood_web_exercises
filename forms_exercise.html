@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+<form action="https://requestb.in/pdkbd7pd" method="POST">
+    <label for="email">
+        Email
+        <input type="text" id="email" placeholder="example@domain.com" name="email" required>
+    </label>
+
+    <label for="password">
+        password
+        <input type="password" id="password" placeholder="5 chars at least" name="password">
+    </label>
+
+    <label for="bio"> Bio:
+        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Talk about yourself">
+        </textarea>
+    </label>
+
+
+        <p>How did you hear about us</p>
+    <input type="radio" name="feedback" id="b" value="billboard">
+    <label for="b">Billboard</label>
+
+        <input type="radio" id="r" name="feedback" value="radio advertisement"><label for="r">radio advertisement</label>
+
+        <input type="radio" id="i" name="feedback" value="internet advertisement"><label for="i">internet advertisement</label>
+
+        <input type="radio" id="o" name="feedback" value="other"><label for="o">others</label>
+
+
+    <label for="browser">Fav Browser</label>
+    <select name="browser" id="browser">
+        <option value="chrome">Chrome</option>
+        <option value="firefox">Firefox</option>
+        <option value="opera">Opera</option>
+    </select>
+
+    <input type="submit" value="send feedback">
+
+    <!-- This is another way to submit-->
+    <!--<button>Send feedback</button>-->
+
+</form>
+</body>
+</html>
