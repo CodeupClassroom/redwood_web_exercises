@@ -1,0 +1,8 @@
+h1 {
+    color: cyan;
+    font-size:100px;
+}
+/* This changes the body bg color */
+body{
+    background-color: antiquewhite;
+}
