@@ -20,6 +20,20 @@
                 * It implies some sort of repetition of the same process
                 * directories are containers
 * Git workflow
+    * `git status`
+    * `git commit --amend -m "Missing message"`
+    * `git add filename`
+        * `git add .` This adds everything in the current directory, but
+           deleted files
+        * `git add -A` This adds everything, even ignored files
+    * `git commit -m "Add examples for HTML forms"`
+    * `git commit`
+        * If your editor is vim
+            * Press `i` to start typing
+            * Once your done, press `esc`
+            * To quit the editor press `:wq`
+    * `git log` to see your new commit
+    * `git push origin master`
 * HTML Overview
     * Elements are containers (grammar)
         * Elements can have either more elements or text (text nodes)
