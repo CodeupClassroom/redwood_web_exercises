@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms examples</title>
+</head>
+<body>
+<form action="https://requestb.in/1ggsm3p1">
+    <label for="username">Username</label>
+    <!-- All form elements need a name -->
+    <!-- otherwise they wil be ignored by the server -->
+    <!-- this element is sent to the server because it's readonly -->
+    <input id="username" name="username"  value="1234" readonly>
+
+    <label for="password">Password</label>
+    <!-- this element is not sent to the server because it's disabled -->
+    <input type="password" id="password" name="password" disabled>
+
+    <label>
+        Select your favorite programming languages
+    </label>
+    <label>
+        <input type="checkbox" name="languages" value="JavaScript"> JavaScript
+    </label>
+    <label>
+        <input value="Java" type="checkbox" name="languages" checked> Java
+    </label>
+    <label>
+        <input type="checkbox" name="languages" value="Ruby"> Ruby
+    </label>
+    <label>
+        <input type="checkbox" name="languages" value="Python"> Python
+    </label>
+    <label>
+        <input type="checkbox" name="languages" value="PHP"> PHP
+    </label>
+
+    <label>What do you prefer?</label>
+    <label>
+        <input type="radio" name="type" value="frontend">
+        Frontend
+    </label>
+    <label>
+        <input type="radio" name="type" value="backend">
+        Backend
+    </label>
+
+    <label for="framework">Select your favorite framework</label>
+    <select name="framework" id="framework">
+        <option value="bootstrap">Bootstrap</option>
+        <option value="spring" selected>Spring</option>
+        <option value="react">React</option>
+    </select>
+
+    <label for="library">Select your favorite library</label>
+    <select name="library" id="library" multiple>
+        <option value="jquery">jQuery</option>
+        <option value="momentjs" selected>Moment JS</option>
+        <option value="thymelead">Thymleaf</option>
+    </select>
+
+    <input type="hidden" name="identifier" value="luis1">
+
+    <input type="submit" value="Login">
+    <button>Login</button>
+</form>
+</body>
+</html>
