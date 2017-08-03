@@ -1,0 +1,41 @@
+h1, h2 {
+    color: red;
+}
+
+h1 {
+   color: blue;
+}
+
+.fancy-header{
+    color: purple;
+    font-weight: bolder;
+}
+
+.personal-info {
+    font-size: 15px
+}
+
+div>h2 {
+    color: black;
+}
+
+#top {
+    text-decoration: none;
+    font-size: larger;
+}
+
+#top:hover{
+    text-decoration: underline;
+}
+
+#square {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+
+#square:hover {
+    background-color: indianred;
+}
+
+
