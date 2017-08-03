@@ -1,0 +1,68 @@
+body {
+    background-color: #E6ECF0;
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #3B94D9;
+}
+
+button {
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid #3B94D9;
+}
+
+input {
+    border-radius: 15px;
+    border: 1px solid #aaa;
+    background-color: #E6ECF0;
+    background-image: url("http://via.placeholder.com/13x13");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.highlight {
+    background-color: #3B94D9;
+    color: #fff;
+}
+
+.regular {
+    background-color: #fff;
+    color: #3B94D9;
+}
+
+header,
+.panel {
+    background-color: #fff;
+}
+
+.nav-item {
+    font-weight: bold;
+    color: #B3BCC3;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    color: #3B94D9;
+}
+
+.hero {
+    /* Relative path */
+    background-image: url("../imgs/background.jpeg");
+    height: 300px;
+}
+
+.hero > img {
+    border-radius: 100px;
+}
+
+#location {
+    list-style-image: url("http://via.placeholder.com/18x18");
+}
+
+

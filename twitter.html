@@ -2,9 +2,201 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Twitter</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="css/twitter.css">
 </head>
 <body>
-$END$
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="nav-item">Home</a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">Moments</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-item">Notifications</a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">Messages</a>
+            </li>
+        </ul>
+        <form action="#search">
+            <input placeholder="Search Twitter">
+        </form>
+        <img src="http://lorempixel.com/20/20" alt="Avatar">
+        <form action="#">
+            <button class="highlight">Tweet</button>
+        </form>
+    </nav>
+</header>
+<main>
+    <section class="hero">
+        <img src="http://lorempixel.com/150/150" alt="Avatar">
+    </section>
+    <section class="actions">
+        <nav>
+            <ul>
+                <li>
+                    Tweets <span>5077</span>
+                </li>
+                <li>
+                    Following <span>644</span>
+                </li>
+                <li>
+                    Followers <span>461</span>
+                </li>
+                <li>
+                    Likes <span>2895</span>
+                </li>
+                <li>
+                    Lists <span>4</span>
+                </li>
+                <li>
+                    Moments <span>0</span>
+                </li>
+            </ul>
+        </nav>
+        <form action="#">
+            <button class="regular">Edit Profile</button>
+        </form>
+    </section>
+    <aside class="profile">
+        <h1>
+            Luis
+            <small>@MontealegreLuis</small>
+        </h1>
+        <p>
+            Instructor
+            <a href="#">@gocodeup</a> |
+            Web developer
+        </p>
+        <ul>
+            <li id="location">San Antonio, TX</li>
+            <li id="site">
+                <a href="#">montealegreluis.com/en</a>
+            </li>
+            <li id="joined">
+                Joined June 2011
+            </li>
+            <li id="birthday">
+                April 25th
+            </li>
+        </ul>
+    </aside>
+    <section class="panel">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Tweets</a>
+                </li>
+                <li>
+                    <a href="#">Tweets & Replies</a>
+                </li>
+                <li>
+                    <a href="#">Media</a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <img src="http://lorempixel.com/30/30" alt="Avatar">
+            <h3>
+                ajfisher‏
+                <span>@ajfisher 4h</span>
+            </h3>
+            <p>
+                Great comment by @LeaVerou "when you make something accessible to novices, it becomes easier for everybody". #code17
+            </p>
+        </div>
+        <div>
+            <img src="http://lorempixel.com/30/30" alt="Avatar">
+            <h3>
+                Tentacular Devops 🐙‏
+                <span>@noahsussman 14h</span>
+            </h3>
+            <p>
+                More than the act of #testing, the act of designing tests is one of the best bug preventers known.
+                <br>
+                — Boris Beizer
+            </p>
+        </div>
+        <div>
+            <img src="http://lorempixel.com/30/30" alt="Avatar">
+            <h3>
+                Anil Dash‏
+                <span>@anildash 16h</span>
+            </h3>
+            <p>
+                Our culture always favors the myth of a lone genius having a moment of inspiration over the reality of collaborators iterating over time.
+            </p>
+        </div>
+    </section>
+    <aside>
+        <section class="panel">
+            <h2>Who to follow</h2>
+            <div>
+                <div>
+                    <img src="http://lorempixel.com/30/30" alt="user">
+                    <h3>
+                        J. B. Rainsberger
+                        <small>@jbrains</small>
+                    </h3>
+                    <form action="#">
+                        <button class="highlight">Follow</button>
+                    </form>
+                </div>
+                <div>
+                    <img src="http://lorempixel.com/30/30" alt="user">
+                    <h3>
+                        Martin Fowler
+                        <small>@martinfowler</small>
+                    </h3>
+                    <form action="#">
+                        <button class="highlight">Follow</button>
+                    </form>
+                </div>
+                <div>
+                    <img src="http://lorempixel.com/30/30" alt="user">
+                    <h3>
+                        Kevlin Henney
+                        <small>@KevlinHenney</small>
+                    </h3>
+                    <form action="#">
+                        <button class="highlight">Follow</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="panel">
+            <h2>Trends for you</h2>
+            <div>
+                <h3>
+                    <a href="#">
+                        #SpringBoot
+                    </a>
+                </h3>
+                <p>1,588 tweets</p>
+            </div>
+            <div>
+                <h3>
+                    <a href="#">
+                        #Bootstrap
+                    </a>
+                </h3>
+                <p>14.8K tweets</p>
+            </div>
+            <div>
+                <h3>
+                    <a href="#">
+                        #jQuery
+                    </a>
+                </h3>
+                <p>24.4K tweets</p>
+            </div>
+        </section>
+    </aside>
+</main>
 </body>
 </html>
