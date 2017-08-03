@@ -1,9 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#box1{
+    font-size: 100px;
+}
+
 h1, h2 {
     color: red;
+    text-decoration: underline;
 }
 
 h1 {
    color: blue;
+}
+
+header{
+    text-align: center;
+}
+
+body{
+    background-color: #B3BCC3;
+    /*margin: 0;*/
+    /*background-image: url("../imgs/background.jpeg");*/
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .fancy-header{
@@ -36,6 +57,30 @@ div>h2 {
 
 #square:hover {
     background-color: indianred;
+}
+
+ul li{
+    list-style: square;
+}
+
+table {
+    font-family: "Arial Black";
+}
+
+td, th {
+    padding: 10px;
+}
+
+a:link{
+    color: green;
+}
+
+a:active{
+    color: red;
+}
+
+a:hover{
+    color:black;
 }
 
 
