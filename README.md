@@ -104,3 +104,17 @@
 * If a form element is `disabled` then is not sent to the server either
 * If a form element is `readonly` it is sent to the server anyway
 * A form element without a `name` is not sent to the server
+
+## CSS
+
+* One more service for images https://placeholder.com/
+* Check if the feature you want to use is supported by browsers https://caniuse.com/
+* Font families
+    * Serif
+    * Sans serif
+    * Monospace
+* Using Google fonts
+    * Select a font
+    * Add a link element in your HTML pointing to teh font you selected
+
+
