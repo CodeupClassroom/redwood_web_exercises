@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: #E6ECF0;
     font-family: 'Lato', sans-serif;
 }
@@ -65,4 +67,11 @@ header,
     list-style-image: url("http://via.placeholder.com/18x18");
 }
 
-
+.column-small {
+    float: left;
+    width: 25%;
+}
+.column-big {
+    float: left;
+    width: 48%;
+}
