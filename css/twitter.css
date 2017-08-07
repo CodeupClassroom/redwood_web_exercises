@@ -25,6 +25,7 @@ a {
 .nav-menu {
     list-style-type: none;
     background-color: #fff;
+    float: left;
 }
 
 /* Navigation menu elements */
@@ -40,6 +41,15 @@ a {
 
 .nav-link:hover {
     color: #3B94D9;
+}
+
+.inline-form {
+    display: inline-block;
+}
+
+.nav-right{
+    margin-top: 12px;
+    float: right;
 }
 
 /* Module button */
@@ -108,4 +118,8 @@ a {
 
 .column-big {
     width: 48%;
+}
+
+.row {
+    overflow: auto;
 }
