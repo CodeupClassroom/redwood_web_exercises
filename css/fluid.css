@@ -6,6 +6,14 @@
     margin: 0 auto;
 }
 
+.nav {
+    list-style-type: none;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
 .row {
     clear: both;
 }
@@ -20,4 +28,26 @@
 
 .column-small {
     width: 20%;
+}
+
+.hero {
+    /* Relative path */
+    background-image: url("../imgs/background.jpeg");
+    height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+    .column-big {
+        width: 100%;
+    }
+
+    .column-small {
+        clear: both;
+        width: 100%;
+        border: 1px solid red;
+    }
+
+    .hero {
+        display: none;
+    }
 }

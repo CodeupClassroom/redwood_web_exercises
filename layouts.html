@@ -2,22 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Layouts example</title>
     <link rel="stylesheet" href="css/fluid.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body>
 <div class="container">
     <header>
         <nav>
-            <ul>
-                <li>
+            <ul class="nav">
+                <li class="nav-item">
                     <a href="#">Home</a>
                 </li>
-                <li><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section class="hero">
+            <h1>Welcome!</h1>
+        </section>
         <article class="column column-big">
             <h1>Welcome to my page</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum dolore ea
@@ -29,7 +34,7 @@
         </article>
         <aside class="column column-small">
             <nav>
-                <ul>
+                <ul class="nav">
                     <li><a href="#">More content</a></li>
                 </ul>
             </nav>
