@@ -29,12 +29,16 @@ a {
 
 /* Navigation menu elements */
 .nav-item {
+    display: inline-block;
     font-weight: bold;
+}
+
+.nav-link {
     color: #B3BCC3;
     text-decoration: none;
 }
 
-.nav-item:hover {
+.nav-link:hover {
     color: #3B94D9;
 }
 
