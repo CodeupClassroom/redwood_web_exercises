@@ -1,3 +1,13 @@
+/*
+ * 1. Base or reset rules
+ * 2. Modules rules (as they are usually positioned in the page)
+ *    1. Blocks
+ *    2. Elements
+ *    3. States
+ * 3. Layout (columns, AKA grid system)
+ */
+
+/* Base rules */
 body {
     margin: 0;
     padding: 0;
@@ -5,44 +15,19 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-ul {
-    list-style-type: none;
-}
-
 a {
     color: #3B94D9;
 }
 
-button {
-    font-weight: bold;
-    border-radius: 15px;
-    border: 1px solid #3B94D9;
-}
+/* Modules */
 
-input {
-    border-radius: 15px;
-    border: 1px solid #aaa;
-    background-color: #E6ECF0;
-    background-image: url("http://via.placeholder.com/13x13");
-    background-repeat: no-repeat;
-    background-position: right;
-}
-
-.highlight {
-    background-color: #3B94D9;
-    color: #fff;
-}
-
-.regular {
-    background-color: #fff;
-    color: #3B94D9;
-}
-
-header,
-.panel {
+/* Navigation module */
+.nav-menu {
+    list-style-type: none;
     background-color: #fff;
 }
 
+/* Navigation menu elements */
 .nav-item {
     font-weight: bold;
     color: #B3BCC3;
@@ -53,13 +38,53 @@ header,
     color: #3B94D9;
 }
 
+/* Module button */
+.button {
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid #3B94D9;
+}
+
+/* State / Modifiers */
+.button-highlighted {
+    background-color: #3B94D9;
+    color: #fff;
+}
+
+.button-regular {
+    background-color: #fff;
+    color: #3B94D9;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+}
+
+/* Search box */
+.search-box {
+    border-radius: 15px;
+    border: 1px solid #aaa;
+    background-color: #E6ECF0;
+    background-image: url("http://via.placeholder.com/13x13");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+/* Panel */
+.panel {
+    background-color: #fff;
+}
+
+/* Hero */
 .hero {
     /* Relative path */
     background-image: url("../imgs/background.jpeg");
     height: 300px;
 }
 
-.hero > img {
+/* Profile picture */
+.profile-pic {
     border-radius: 100px;
 }
 
@@ -67,11 +92,16 @@ header,
     list-style-image: url("http://via.placeholder.com/18x18");
 }
 
-.column-small {
+/* Layout */
+.column {
     float: left;
+}
+
+/* States */
+.column-small {
     width: 25%;
 }
+
 .column-big {
-    float: left;
     width: 48%;
 }
