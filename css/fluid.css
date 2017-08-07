@@ -1,0 +1,23 @@
+/* Tightly coupled */
+
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.row {
+    clear: both;
+}
+
+.column {
+    float: left;
+}
+
+.column-big {
+    width: 80%;
+}
+
+.column-small {
+    width: 20%;
+}
