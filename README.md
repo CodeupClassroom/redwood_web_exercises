@@ -1,100 +1,136 @@
 # Notes for HTML and CSS
 
-* Sites to practice typing and shortcuts
-    * typing club, typing IO, shortcut foo
+1. [Terminal commands](#terminal-commands)
+1. [Git commands](#git-commands)
+1. [HTML notes](#html-notes)
+    1. [HTTP protocol](#http-protocol)
+    1. [HTML forms](#html-forms)
+1. [CSS notes](#css-notes)
+1. [Resources](#resources)
+
+## Terminal commands
+
+* Everything in your filesystem is either a **file** or a **directory** (a container
+  for files)
+* Your file system is organized as a tree structure
+    * There is a root element `/` (AKA the root directory)
+* Hidden files start with a `.`
 * Working with files and directories
-    * Directory / File
-        * Hidden files start with a `.`
-        * `pwd` Print working directory
-        * `mkdir` Create directory
-        * `cd` Change directory, moves to a specific directory
-        * `cd ..` leave directory, go to the parent directory
-        * `ls` List files
-        * `touch` Creates an empty file
-        * `cat` Show the contents of a file
-        * `rm` Delete files or directories
-            * We'll add a flag `-r` recursive
-                * `rm -r directory` If the directory has only empty directories or is empty itself
-                * `rm -rf directory` If the directory or any inner directory has files
-                * Repeat the same operation to the directories within the current directories
-                * It implies some sort of repetition of the same process
-                * directories are containers
+    * `pwd` Print working directory
+    * `mkdir` Create a directory
+    * `cd` Move to a specific directory
+    * `cd ..` Go to the parent directory
+    * `ls` List files
+    * `touch` Creates an empty file
+    * `cat` Show the contents of a file
+    * `rm` Delete files or directories
+        * For directories we'll add the flag `-r` (recursive)
+            * `rm -r directory` It will work if the directory is empty
+            * `rm -rf directory` If the directory is not empty, ie, it contains files
+               or other directories, we'll need the flag `-f` (force)
+        * It needs the recursive flag, because we need to repeat the same operation but
+          for the files and directories within the current directory. Recursion is a
+          type of repetition
+
+## Git commands
+
 * Git workflow
-    * `git status`
-    * `git commit --amend -m "Missing message"`
-    * `git add filename`
-        * `git add .` This adds everything in the current directory, but
-           deleted files
+    * `git status` List the current changes 
+    * `git add filename` Add a single file
+        * `git add .` This adds everything in the current directory, but deleted files
         * `git add -A` This adds everything, even ignored files
-    * `git commit -m "Add examples for HTML forms"`
-    * `git commit`
-        * If your editor is vim
+    * `git commit` Save your changes to git. You'll need to include a message
+        * The default editor is vim
             * Press `i` to start typing
             * Once your done, press `esc`
             * To quit the editor press `:wq`
-    * `git log` to see your new commit
-    * `git push origin master`
-* HTML Overview
-    * Elements are containers (grammar)
-        * Elements can have either more elements or text (text nodes)
-        * Types of elements 
-            * Block level -> div, p, h1, h6
-            * Inline elements -> strong, em, span
-            * Void elements -> br, meta, hr
-        * Rules
-            * block within block (valid)
-            * inline within inline (valid)
-            * inline within block (valid)
-            * are void elements block elements (some of them -> br, hr)
-            * block within inline (invalid)
-        * Attributes (describe elements)
-            * examples: class, id, src, href
-            * required: a -> href
-            * optional: p -> class
-    * Without errors vs Valid
-        * well-formed documents (syntax)
-            * Have a correct syntax
-        * mal-formed documents (syntax errors)
-            * A non-void element must have a closing
-    * Valid document/Invalid document
-        * https://validator.w3.org/
-        * Follow the rules defined by the doctype
+    * `git commit -m "Add examples for HTML forms"` Write the message using the `-m`
+       flag
+    * `git commit --amend -m "Fixed message"` Fix a previous commit, with a new
+       message
+    * `git log` To see a list with all the commits, including your most recent one
+    * `git push origin master` Send your changes to Github
 
-## HTML forms
+## HTML Notes
+
+* HTML is markup language. It describes the structure of a document
+* The main component of this language is an **element**
+* There's 3 types of elements 
+    * Block level -> `div`, `p`, `h1`, `h6`
+    * Inline elements -> `strong`, `em`, `span`
+    * Void elements -> `br`, `meta`, `hr`
+* The parts of an element are
+    * Tags (`<tag></tag>`)
+        * Opening
+        * Closing (void elements do not have it)
+    * Attributes (`attribute="value"`) 
+        * They represent properties of the element
+        * Some are required (`src` in an `img`), some are optional (`class`)
+        * Some do not require a value, since it would be redundant (`disabled`,
+          `readonly`)
+* Elements are containers
+    * Elements can have 
+        * no content (empty)
+        * more elements (children) 
+        * or text (text nodes)
+* Rules
+    * block within block (valid)
+    * inline within inline (valid)
+    * inline within block (valid)
+    * Some void elements are block elements (`br`, `hr`)
+    * block within inline (invalid)
+* A document can be a
+    * well-formed document
+        * Have a correct syntax
+    * mal-formed documents
+        * Have incorrect syntax. For instance, a non-void element without a closing tag
+    * invalid document
+        * It has correct syntax, but does not follow the rules defined by the doctype.
+          It uses a non-existing tag (`<bananas></bananas>`)  
+    * valid document
+        * It has correct syntax
+        * It follows the rules defined by the doctype
+
+### HTTP protocol
 
 * What's the HTTP protocol?
-    * Rules to exchange messages in Internet
+    * It defines the rules to exchange messages in the Internet
+* Communication occurs between a `client` and a `server`
+* They exchange messages 
+    * The client sends a `request`
+    * The server returns a `response`
 * Types of messages
     * Questions
-    * Command
-* Messages come in pairs request/response
-* HTTP verbs
-    * GET - questions
-    * POST - commands
-    * There are more: PUT, DELETE
+    * Commands
+* HTTP verbs are used to determine the type of the message
+    * `GET` requests are **questions** (Could you play this song?)
+    * `POST` requests are **commands** (Pay the pizza I ordered)
+    * There are more: `PUT`, `DELETE`, `PATCH`
 * Parts of a message
     * Headers
         * Meta-information (configuration)
             * Status code: 200 OK, 404 Not found, 500 Server error
             * Content type: image, audio, video, text, html, pdf
     * Body
-            * The real content
+        * The real content
 
-### Forms and form elements
+### HTML forms
 
 #### Default values in forms
-* The default method for forms is `get`
+
+* The default method (HTTP verb) for forms is `get`
 * The default type for `input` is `text`
 * The default type for `button` is `submit`
 
 #### How is the information sent
 * Depending on the method the information is sent to the server within
     * The request **body** if it's a post request
-    * The request **headers** if it's a get request (in the query string)
-    * In both cases the format is the same
-        * `name1=value1&name2=value2` ....
+    * The request **headers** if it's a get request (in the **query string**)
+* In any case the format used is the same
+    * `name1=value1&name2=value2` ....
 
 #### What is sent to the server
+
 * If you want to send a pre-populated value, then
     * for `checkbox`, `radio`, add the `checked` attribute
     * for `select`, add the `selected` attribute
@@ -105,16 +141,36 @@
 * If a form element is `readonly` it is sent to the server anyway
 * A form element without a `name` is not sent to the server
 
-## CSS
+## CSS Notes
 
-* One more service for images https://placeholder.com/
-* Check if the feature you want to use is supported by browsers https://caniuse.com/
-* Font families
+* There's 3 main font families
     * Serif
     * Sans serif
     * Monospace
-* Using Google fonts
+* How to use Google fonts
     * Select a font
-    * Add a link element in your HTML pointing to teh font you selected
+    * Add a link element in your HTML pointing to the font you selected
+    * Use the font family in your CSS rule
 
+## Resources
 
+### For typing and shortcuts
+
+* [Typing club](https://www.typingclub.com/)
+* [Typing IO](https://typing.io/)
+* [Shortcut foo](https://www.shortcutfoo.com/)
+
+### Services to include images
+
+* [Image placeholders](https://placeholder.com/)
+* [Lorem ipsum images](http://lorempixel.com/)
+* [Free stock photos](https://www.pexels.com/)
+
+### Validators
+
+* [HTML validator](https://validator.w3.org/)
+
+### Miscellaneous
+
+* [Is the HTML/CSS feature supported?](https://caniuse.com/)
+* [Google fonts](https://fonts.google.com/)
