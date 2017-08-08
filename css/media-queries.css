@@ -48,3 +48,33 @@ h1 {
 .sub-section {
     font-style: italic;
 }
+
+@media screen and (min-width: 768px) {
+    .hidden-on-mobile {
+        display: none;
+    }
+    h1 {
+        text-align: left;
+        float: left;
+        width: 67%;
+    }
+    .main {
+        float: left;
+        width: 67%;
+        padding-right: 3em;
+        box-sizing: border-box;
+    }
+    .sub-section {
+        float: left;
+        width: 33%;
+    }
+    .nav-links {
+        text-align: right;
+    }
+    .nav-links li {
+        display: inline-block;
+        background-color: transparent;
+        padding: .2em;
+        line-height: 2em;
+    }
+}
