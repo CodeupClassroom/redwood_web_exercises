@@ -169,6 +169,17 @@
     * Add a link element in your HTML pointing to the font you selected
     * Use the font family in your CSS rule
 
+### Grids
+
+A generalization to create layouts based on columns
+
+* They generally are 12 columns
+* We have several general concepts
+    * Container. It will define the maximum width of the blocks in the page
+    * Row. It's a container for columns
+    * Columns. Are usually elements floating with a specific width based on
+      percents 
+
 ## Resources
 
 ### For typing and shortcuts

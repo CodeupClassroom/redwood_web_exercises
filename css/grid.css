@@ -1,0 +1,30 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row {
+    width: 100%;
+    /*overflow: auto;*/
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column-two-thirds {
+    float: left;
+    width: 67%;
+}
+.column-one-third {
+    float: left;
+    width: 33%;
+}
+
+@media screen and (min-width: 720px) {
+    /* This is going to be applied to screens starting at 360px and bigger*/
+    .column-three-thirds-medium {
+        float: left;
+        width: 100%;
+    }
+}
