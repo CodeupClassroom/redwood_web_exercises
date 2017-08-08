@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="header">
-    <nav>
+    <nav class="row">
         <ul class="nav-menu">
             <li class="nav-item">
                 <a href="#" class="nav-link">Home</a>
@@ -23,13 +23,15 @@
                 <a href="#" class="nav-link">Messages</a>
             </li>
         </ul>
-        <form action="#search">
-            <input class="search-box" placeholder="Search Twitter">
-        </form>
-        <img src="http://lorempixel.com/20/20" alt="Avatar">
-        <form action="#">
-            <button class="button button-highlighted">Tweet</button>
-        </form>
+        <div class="nav-right">
+            <form class="inline-form" action="#search">
+                <input class="search-box" placeholder="Search Twitter">
+            </form>
+            <img class="profile-pic" src="http://lorempixel.com/20/20" alt="Avatar">
+            <form class="inline-form" action="#">
+                <button class="button button-highlighted">Tweet</button>
+            </form>
+        </div>
     </nav>
 </header>
 <main>
