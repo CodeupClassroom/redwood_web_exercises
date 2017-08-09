@@ -4,37 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Media Queries</title>
+    <link rel="stylesheet" href="css/grid-layout.css">
     <link rel="stylesheet" href="css/media-queries.css">
 </head>
 <body>
+<div class="container">
     <div class="alert-info hidden-on-mobile">
         <a href="#main">Skip to main content</a>
     </div>
-    <h1>Company</h1>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="row">
+        <div class="column one-half">
+            <h1>Company</h1>
+        </div>
+        <div class="column one-half">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <div class="header-img">
         <img src="http://lorempixel.com/g/900/400" alt="">
     </div>
-    <section id="main" class="main">
-        <h2>Main Section</h2>
-        <p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p>
-    </section>
-    <section class="sub-section">
-        <h2>Sub-section</h2>
-        <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
-    </section>
-    <footer>
-        <p>(c) 2017 All rights reserved</p>
-        <div id="social-media-links">
+    <div class="row">
+        <section id="main" class="main column two-thirds">
+            <h2>Main Section</h2>
+            <p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto
+                harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores
+                blanditiis veritatis vitae amet maiores sapiente in?</p>
+        </section>
+        <section class="sub-section column one-third">
+            <h2>Sub-section</h2>
+            <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde
+                minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae
+                tenetur. Itaque numquam!</p>
+        </section>
+    </div>
+    <footer class="row">
+        <div class="column one-half">
+            <p>(c) 2017 All rights reserved</p>
+        </div>
+        <div id="social-media-links column one-half">
 
         </div>
     </footer>
+</div>
 </body>
 </html>
