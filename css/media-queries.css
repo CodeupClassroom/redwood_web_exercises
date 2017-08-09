@@ -55,18 +55,10 @@ h1 {
     }
     h1 {
         text-align: left;
-        float: left;
-        width: 67%;
     }
     .main {
-        float: left;
-        width: 67%;
         padding-right: 3em;
         box-sizing: border-box;
-    }
-    .sub-section {
-        float: left;
-        width: 33%;
     }
     .nav-links {
         text-align: right;
