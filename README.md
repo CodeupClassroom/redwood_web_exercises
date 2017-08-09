@@ -190,7 +190,18 @@ A generalization to create layouts based on columns
     * Go to http://code.jquery.com/ and select the link to the minified version of the latest release (3.2.1)
      and include the `script` tag before the `script` for bootstrap
 
+### Download bootstrap
     
+* Got to http://getbootstrap.com/getting-started/
+    * Click on the button "Download Bootstrap"
+    * Extract the contents of the zip file
+    * Copy the file `css/bootstrap.min.css` to your `css` folder
+    * Copy the directory `fonts` to the root of your project
+    * Create a new directory `js` in your project
+    * Copy the file `js/bootstrap.min.js` to your new `js` in your project
+    * link to the CSS and JS files from your HTML (`css/bootstrap.min.css` and 
+       `boostrap.min.js`)
+    * Include jQuery from the CDN before the script for bootstrap
 
 ## Resources
 
