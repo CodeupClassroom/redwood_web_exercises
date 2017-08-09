@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -10,11 +11,33 @@
     >
     <title>Bootstrap from the CDN</title>
 </head>
-<body>
+<body class="container">
     <h1>Bootstrap from the CDN</h1>
+    <button class="btn btn-default">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        I'm a button
+    </button>
+    <input class="btn btn-default" type="submit" value="I'm a submit input">
+    <a class="btn btn-default" href="#">I'm a link</a>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores doloremque facere harum modi quam quis, sit ut vel. Debitis dicta excepturi id incidunt libero nam natus officia tenetur vel.
     </p>
+    <img
+        src="http://lorempixel.com/200/200"
+        alt="Random image"
+        class="img-responsive img-circle"
+    >
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="http://lorempixel.com/64/64" alt="...">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">This is my custom heading</h4>
+            ...
+        </div>
+    </div>
     <script
         src="http://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
