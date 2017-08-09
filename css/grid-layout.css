@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+.one {
+    width: 100%;
+}
+
 .one-third {
     width: 33.33%;
 }
@@ -43,4 +47,19 @@
 
 .one-eighth {
     width: 12.5%;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .one-third,
+    .one-half,
+    .one-fourth,
+    .one-sixth,
+    .one-eighth,
+    .two-thirds {
+        width: 100%;
+    }
 }
