@@ -178,7 +178,19 @@ A generalization to create layouts based on columns
     * Container. It will define the maximum width of the blocks in the page
     * Row. It's a container for columns
     * Columns. Are usually elements floating with a specific width based on
-      percents 
+      percents
+      
+## Setting up bootstrap
+
+### From the CDN
+
+* Got to http://getbootstrap.com/getting-started/
+    * Copy the first `link` tag and add it to the head of your document
+    * Copy the only `script` tag and add it before the end of your `body` element
+    * Go to http://code.jquery.com/ and select the link to the minified version of the latest release (3.2.1)
+     and include the `script` tag before the `script` for bootstrap
+
+    
 
 ## Resources
 
