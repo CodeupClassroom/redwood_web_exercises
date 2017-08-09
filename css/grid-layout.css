@@ -1,0 +1,48 @@
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.row {
+    width:100%;
+    margin-bottom: 1em;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #d3d3d3;
+    border: 1px solid black;
+}
+
+.one-third {
+    width: 33.33%;
+}
+
+.two-thirds {
+    width: 66.67%;
+}
+
+.one-half {
+    width: 50%;
+}
+
+.one-fourth {
+    width: 25%;
+}
+
+.one-sixth {
+    width: 16.66%;
+}
+
+.one-eighth {
+    width: 12.5%;
+}
