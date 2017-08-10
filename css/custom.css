@@ -1,0 +1,10 @@
+.hero-pizza {
+    background-image: url("../imgs/pizza.png");
+}
+
+.hero-pizza-title {
+    background-color: white;
+    padding-top: .25em;
+    text-align: center;
+    opacity: .7;
+}
