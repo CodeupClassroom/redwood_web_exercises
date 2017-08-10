@@ -203,6 +203,10 @@ A generalization to create layouts based on columns
        `boostrap.min.js`)
     * Include jQuery from the CDN before the script for bootstrap
 
+## Grid system
+
+* `col-xs-3` means thre columns for extra small devices and bigger (all devices)
+
 ## Resources
 
 ### For typing and shortcuts
