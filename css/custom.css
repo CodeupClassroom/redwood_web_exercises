@@ -1,5 +1,6 @@
 .hero-pizza {
     background-image: url("../imgs/pizza.png");
+    background-size: cover;
 }
 
 .hero-pizza-title {
