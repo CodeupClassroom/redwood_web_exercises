@@ -207,6 +207,35 @@ A generalization to create layouts based on columns
 
 * `col-xs-3` means thre columns for extra small devices and bigger (all devices)
 
+## Javascript
+
+* Introduction to JavaScript
+    * It was created in 7-10 days
+    * Its loosely typed
+        * Variables change type according to its content
+* Statements
+    * variable declaration `var identifier`;
+        * An identifier cannot start with a number
+        * Cannot include spaces
+        * Cannot include dashes
+        * They can include underscores
+    * assignment
+        `identifier = "value";`
+* Expression
+    * Is a statement that returns a value
+        * A variable declaration is NOT a expression
+        * An assignment IS a expression
+    * All expressions have types
+        * a boolean expression
+        * a numeric expression
+        * a string expression
+* Javascript will try to convert the values of variables based on the operator
+    * `x && y`, will try to convert both `x` and `y` to booleans if they have a different type
+    * `x * y`, will try to convert the variables to numbers
+    * `x + y`, is more complicated because `+` is used for both addition and concatenation,
+       so JS will look at the types of the variables, if one of them is a string, it will be
+       concatenation
+
 ## Resources
 
 ### For typing and shortcuts
