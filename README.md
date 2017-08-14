@@ -235,6 +235,17 @@ A generalization to create layouts based on columns
     * `x + y`, is more complicated because `+` is used for both addition and concatenation,
        so JS will look at the types of the variables, if one of them is a string, it will be
        concatenation
+* String Indexes in JavaScript
+
+    We start counting from 0
+
+    ```
+    string:  "codeup"
+    indexes:  012345
+    ```
+    
+    * The character at index `0` is `c`
+    * The character at index `3` is `e`
 
 ## Resources
 
