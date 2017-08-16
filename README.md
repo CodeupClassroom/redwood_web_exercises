@@ -246,6 +246,11 @@ A generalization to create layouts based on columns
     
     * The character at index `0` is `c`
     * The character at index `3` is `e`
+    
+* Loops Break / Continue
+    - `break` will stop the execution of the whole loop.
+    - `continue` will skip the current cycle of loop and jump to the next iteration.
+    
 
 ## Chrome debugger
 
