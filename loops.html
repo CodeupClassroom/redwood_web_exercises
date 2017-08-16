@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+</head>
+<body>
+<script>
+    // print the number from 1 to five
+    var limit = 5;
+    var counter;
+    // 1. do something
+    // 2. another
+    // ..
+    // 5. go to 1, if (I have enough money)
+    // go to
+    counter = 1; /*Initialization*/
+    while (counter <= limit /*condition*/) { // This may never be executed
+        console.log(counter);
+        counter++; /*increment*/
+    } // go to -> condition
+    // stop
+
+    // This is going to be executed at least once
+    counter = 1; /*Initialization*/
+    do {
+        console.log(counter);
+        counter++;/*increment*/
+    } while (counter <= limit/*condition*/);
+
+    for (
+        counter = 1; // 1 First time (once)
+        counter <= limit; // 2. should i continue?
+        counter++ // 4. increment -> go to condition
+    ) {
+        // you're repeating an action, but the data is different
+        console.log(counter); // 3. body
+    }
+</script>
+</body>
+</html>

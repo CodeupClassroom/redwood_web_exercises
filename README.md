@@ -247,6 +247,16 @@ A generalization to create layouts based on columns
     * The character at index `0` is `c`
     * The character at index `3` is `e`
 
+## Chrome debugger
+
+1. Open your Chrome dev tools
+1. Switch to the Sources tab
+1. Click on the file name that contains your JavaScript code
+1. Add a breakpoint in the first line ypu want  to debug (click to left of the line number,
+   the line will become blue-ish)
+1. Refresh your page
+1. Use the button "Step over" to move between lines
+
 ## Resources
 
 ### For typing and shortcuts
