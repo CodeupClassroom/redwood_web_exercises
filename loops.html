@@ -14,10 +14,15 @@
     // ..
     // 5. go to 1, if (I have enough money)
     // go to
-    counter = 1; /*Initialization*/
-    while (counter <= limit /*condition*/) { // This may never be executed
-        console.log(counter);
+    counter = 0; /*Initialization*/
+    while (counter < limit /*condition*/) { // This may never be executed
+
         counter++; /*increment*/
+        if( counter === 2){
+            console.log("found #2, skip it");
+            continue;
+        }
+        console.log("While #" + counter);
     } // go to -> condition
     // stop
 
@@ -33,8 +38,14 @@
         counter <= limit; // 2. should i continue?
         counter++ // 4. increment -> go to condition
     ) {
+        // if we find the number 3 everything stops
+        if(counter === 3){
+            console.log("found #3, break");
+            break;
+        }
+
         // you're repeating an action, but the data is different
-        console.log(counter); // 3. body
+        console.log("for loop: " + counter); // 3. body
     }
 </script>
 </body>
