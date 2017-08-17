@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    var firstName = "Fer";
+    var lastName = "Mendoza";
+    var ferAge = 17;
+
+    // this is a void function, does not return anything
+    function showInfo(age, city) {
+        console.log(firstName + " " + lastName);
+
+        if(age != 0){
+            console.log("Age: " + age);
+        }
+
+        if(city != "" && city != undefined){
+            console.log("City: " + city);
+        }
+
+        console.log(ferAge);
+
+    }
+
+    // Annon function and a return type function
+    var sum = function (a, b) {
+        return a + b;
+    }
+
+    showInfo();
+
+    var res = sum(1,2);
+
+    console.log(res);
+
+
+    // The variables created in here are local variables and could be used only inside the function
+    function innerScope(){
+        var phone = "210-XXX-XXXX";
+    }
+
+    function getAddress(){
+        var address = "Austin hwy";
+        return address;
+    }
+
+
+    innerScope();
+
+//    console.log(address);
+    console.log(getAddress());
+
+
+//    for (var i = 0; i < 100; i++){
+//        printName();
+//    }
+
+</script>
+</body>
+</html>
