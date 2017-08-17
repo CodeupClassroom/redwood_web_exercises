@@ -50,6 +50,12 @@
        message
     * `git log` To see a list with all the commits, including your most recent one
     * `git push origin master` Send your changes to Github
+    
+More commands
+
+* `git fetch` Git download. Downloads changes from the remote without aplying them to mty local repo
+* `git stash` Saves Work in Progress, is similar to commit (temporary save)
+* `git stash list` Shows all the code tha has been stashed
 
 ## HTML Notes
 
@@ -205,7 +211,7 @@ A generalization to create layouts based on columns
 
 ## Grid system
 
-* `col-xs-3` means thre columns for extra small devices and bigger (all devices)
+* `col-xs-3` means three columns for extra small devices and bigger (all devices)
 
 ## Javascript
 
@@ -246,6 +252,22 @@ A generalization to create layouts based on columns
     
     * The character at index `0` is `c`
     * The character at index `3` is `e`
+
+## Control flow statemens
+
+* There's 3 main types
+    * sequential
+    * conditionals
+    * loops
+* Types of conditionals
+    * if
+        * ternary operation
+    * switch
+* Types of loops
+    - while
+    - do-while
+    - for
+
 
 ## Chrome debugger
 
