@@ -47,8 +47,23 @@ isOdd(random);  // number = random
  *  > calculateTip(0.20, 20) // returns 4
  */
 
+function calculateTip(percentage, total){
+    var tip = (percentage / 100) * total;
+    return tip;
+}
+
+console.log(calculateTip(18, 100));
+
+
 /**
  * TODO: use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+function askForCheck(){
+    var total = prompt("Give me the total");
+    var percentage = prompt("Give me the tip %");
+    var tip = calculateTip(percentage, total);
+    console.log("Your tip is: " + tip);
+}
