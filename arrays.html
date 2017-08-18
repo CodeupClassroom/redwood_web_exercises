@@ -20,17 +20,36 @@
 
         var numbers = [1, 2, 3, 4, 5, 10, 20];
 
+        // Another array of numbers to play with
+        var moreNumbers = ["67","68","69"];
+
+        // Push will will 1 or more elements if they are separated by a comma
+        numbers.push(100,45);
+
+        // This will push the elements in the second array inside of the other one, and parse them since they are Strings
+        moreNumbers.forEach(function(el){
+            numbers.push(parseInt(el));
+        });
+
 //        for(var i = 0; i < numbers.length; i++){
 //            numbers[i] = numbers[i] + 2;
 //        }
 
+        // adds the number 0 to the beginning
+        numbers.unshift(0);
+
+        // removes the first element of the array
+        numbers.shift();
+
+        // removes the last element of the array
+        numbers.pop();
+
+        // prints all the elements of the array
         numbers.forEach(function (element, index){
-            numbers[index] = element + 2;
+            numbers[index] = element ;
         });
 
-
         console.log(numbers);
-
 
     })();
 </script>
