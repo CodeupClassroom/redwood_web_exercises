@@ -11,12 +11,25 @@
     (function(){
 
         var names = ["Fer", "Luis", "Zach", "Ryan", "Justin"];
+//
+//        console.log(names[0]);
+//
+//        console.log(names);
+//
+//        console.log(names[1]);
 
-        console.log(names[0]);
+        var numbers = [1, 2, 3, 4, 5, 10, 20];
 
-        console.log(names);
+//        for(var i = 0; i < numbers.length; i++){
+//            numbers[i] = numbers[i] + 2;
+//        }
 
-        console.log(names[1]);
+        numbers.forEach(function (element, index){
+            numbers[index] = element + 2;
+        });
+
+
+        console.log(numbers);
 
 
     })();
