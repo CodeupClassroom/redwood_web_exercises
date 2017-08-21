@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Split - Join</title>
+</head>
+<body>
+<script>
+    // Data migrations
+    var namesString = "Joe,Bob,Sally"; // CSV Comma Separated Values
+    console.log(namesString.split(","));
+
+    var namesArray = ['Joe', 'Bob', 'Sally'];
+
+    console.log(namesArray.join(", "));
+
+    // Building HTML
+    var ul = [
+        '<ul>',
+            "<li>", "Joe", "</li>",
+            "<li>", "Bob", "</li>",
+            "<li>", "Sally", "</li>",
+        '</ul>'
+    ];
+
+    console.log(ul.join(""));
+
+</script>
+</body>
+</html>
