@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays operations</title>
+</head>
+<body>
+<script>
+    "use strict";
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'red'];
+
+    // indexOf -> will give you back the first occurence of the item you're looking for
+    // lastIndexOf -> the last one
+    console.log(colors.indexOf("indigo"));
+    console.log(colors.indexOf("luis"));
+    console.log(colors.indexOf("red"));
+    console.log(colors.lastIndexOf("red"));
+    console.log(colors.lastIndexOf("fer"));
+
+    colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    // Removing elements
+    colors.splice(colors.indexOf("green"), 1); // green
+    colors.splice(colors.indexOf("indigo"), 1); // indigo
+    //colors.splice(3, 2); // arrays are mutable
+    colors = ['red', 'green', 'yellow', 'green', 'green', 'indigo', 'green'];
+
+    var indexGreen = colors.indexOf("green");
+    while (indexGreen !== -1) {
+        colors.splice(indexGreen, 1);
+        indexGreen = colors.indexOf("green");
+    }
+
+    // Add elements
+    colors.splice(colors.indexOf("yellow") +  1, 0, "gray", "brown", "orange");
+
+    // Replace elements
+    colors.splice(colors.indexOf("red"), 2, "green", "green");
+
+    var name = "Zach";
+    name.toUpperCase();  // Strings are immutable
+
+    console.log(name);
+    console.log(colors);
+
+    colors.reverse();
+    console.log(colors);
+
+    colors.sort();
+    console.log(colors);
+
+    var numbers = [2, -1, 100, 56, 987,  45, 0, 54];
+    // callback
+    numbers.sort(function (a, b) { // a = 2 , b = -1
+        // if numbers are equals -> 0
+        // if a > b ->  positive
+        // if a < b -> negative
+        return a - b; // 3 if the number is greater than, lower than or equals
+    });
+    console.log(numbers);
+</script>
+</body>
+</html>
