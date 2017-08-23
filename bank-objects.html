@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function isValidNumber(amount){
+        if(isNaN(amount)){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    var depositFx = function (amount){
+        if(isValidNumber(amount)){
+            this.balance = this.balance + amount;
+            return;
+        }
+
+        return "This is not a valid number";
+    }
+
+    var withdrawFx = function(amount){
+
+        if(isValidNumber(amount)){
+
+            if(amount > this.balance){
+                return "You don't enough money";
+            }
+
+            this.balance -= amount;
+            return;
+        }else{
+            return "This is not a valid number";
+        }
+
+
+    }
+
+
+    // Checking account
+    var checkingAccount = {
+        balance: 0,
+        accountNumber: 12345,
+        owner: "Fer",
+        deposit: depositFx,
+        withdraw: withdrawFx
+    };
+
+    var savingsAccount = {
+        balance: 500,
+        accountNumber: 54321,
+        owner: "Fer",
+        deposit: depositFx,
+        withdraw: withdrawFx
+    };
+
+</script>
+
+</body>
+</html>
