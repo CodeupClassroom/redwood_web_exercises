@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math examples</title>
+</head>
+<body>
+<script>
+    (function () {
+        // are arrays objects? yes
+        // are functions objects? yes
+        // Math has methods
+        console.log(Math.round(20.49));  // 20
+        console.log(Math.round(20.5));   // 21
+        console.log(Math.round(-20.5));  // -20
+        console.log(Math.round(-20.51)); // -21
+
+        console.log(Math.floor(45.95)); //  45
+        console.log(Math.floor(-45.95)); // -46
+
+        console.log(Math.ceil(.95));   // 1
+        console.log(Math.ceil(4));     // 4
+        console.log(Math.ceil(7.004)); // 8
+
+        console.log(Math.pow(2, 16));
+
+        console.log(Math.sqrt(9));  // 3
+        console.log(Math.sqrt(2));  // 1.414213562373095
+        console.log(Math.sqrt(1));  // 1
+        console.log(Math.sqrt(0));  // 0
+        console.log(Math.sqrt(-1)); // NaN
+
+        console.log(Math.PI);
+    })();
+</script>
+</body>
+</html>
