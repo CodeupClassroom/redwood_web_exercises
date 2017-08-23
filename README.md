@@ -273,6 +273,19 @@ A generalization to create layouts based on columns
     - do-while
     - for
 
+## Understanding arrays and objects
+
+* Types
+    * Simple (1 single value)
+        * booleans, numbers, strings
+    * Complex (composition, several values)
+        * array -> groups, sets, collections, of similar things
+            * name[1], name[0] (key (number) -> value (anything))
+        * object -> describing the properties of books
+            * book["title"], book["author"] (key (string) -> value (anything))
+            * book.title, book.author
+        * books[0].title "Clean code"
+        * books[0]["author"] "Robert Martin"
 
 ## Chrome debugger
 
