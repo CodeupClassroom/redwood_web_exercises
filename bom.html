@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+Bom file
+
+<script>
+    "use strict";
+
+    var count = 0;
+    var max = 50;
+    var interval = 100;
+
+    // setInterval( anyFunction(), milliseconds)
+    var intervalId = setInterval(function(){
+
+        if(count >= max){
+            clearInterval(intervalId);
+            // Stop the execution of this function
+            return;
+        }
+
+        count+=5;
+        console.log(count);
+
+    }, interval);
+
+    // Another way to create the anonymous function
+//    var msg =  function(){
+//        console.log("Time's up");
+//    }
+
+    var delay = 2000;
+
+    var timeoutId = setTimeout(function(){
+        console.log("Time's up");
+        // Redirect to Google after x milliseconds
+        window.location = "https://google.com"
+    }, delay);
+
+
+</script>
+
+</body>
+</html>
