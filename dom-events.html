@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Events</title>
+</head>
+<body>
+
+<h1 id="title">Hi there</h1>
+
+<ul>
+    <li>Blue</li>
+    <li>Red</li>
+    <li>Green</li>
+    <li>Grey</li>
+</ul>
+
+<button id="btn1">Do some magic!</button>
+
+<button id="remove">Remove the magic!</button>
+
+<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quas, voluptatibus! Amet doloremque doloribus ducimus enim eum fugit illum ipsum modi officiis, placeat porro quaerat quidem sed temporibus vitae voluptatum?</p>
+
+<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus dignissimos maxime molestias porro quibusdam quis, recusandae? Asperiores laudantium omnis reiciendis! Animi beatae dolorem eaque exercitationem fuga illum laborum, temporibus!</p>
+
+<script>
+    "use strict";
+
+    var btn = document.getElementById("btn1");
+    var rm = document.getElementById("remove");
+    var title = document.getElementById("title");
+
+    var lists =  document.getElementsByTagName("li");
+
+    var listenerFunction = function(){
+        if(this.style.color  == "red"){
+            this.style.color = "black";
+        }else{
+            this.style.color = "red";
+        }
+    };
+
+    // Adding an event listener with an anonymous function
+    btn.addEventListener("click", function(){
+        alert("hi");
+        title.style.color = "blue";
+        // Don't use marquee it's just for fun!
+        title.innerHTML = "<marquee>Magic!!!</marquee>";
+    })
+
+    // Adding an event listener with a defined anonymous function to all the li elements
+    for(var i = 0; i < lists.length;i++){
+        lists[i].addEventListener("click", listenerFunction);
+    }
+
+
+</script>
+
+</body>
+</html>
