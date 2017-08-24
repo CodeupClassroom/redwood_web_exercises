@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM manipulation</title>
+</head>
+<body>
+<input class="container">
+<h1 id="page-title">This is a test</h1>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus deleniti
+    distinctio dolorum eius, eveniet exercitationem hic illo impedit laboriosam libero
+    magnam minima nam nulla quae tempora temporibus totam vero?
+</p>
+<ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus eligendi et
+        labore libero maxime possimus quaerat, recusandae similique sit?
+    </li>
+    <li>Aut autem consequatur deserunt, dolorum ducimus et facilis fugiat natus, numquam
+        officiis omnis repellendus sequi suscipit temporibus vel voluptate voluptatem.
+    </li>
+    <li>At autem commodi deserunt explicabo maxime officiis optio ut? Atque aut autem
+        corporis culpa deserunt impedit inventore laudantium quam soluta!
+    </li>
+    <li class="special">Ad, amet asperiores debitis dolore doloribus harum nobis officiis optio
+        placeat
+        quidem recusandae soluta, sunt voluptate? Amet error excepturi soluta.
+    </li>
+    <li>Aut cum est et iste laborum, minus quisquam veritatis! Culpa cum esse est et id
+        nesciunt nihil optio quidem voluptatem!
+    </li>
+    <li>Amet autem debitis eos itaque reprehenderit voluptates voluptatibus! A amet
+        cupiditate dolore dolorum earum facilis fugiat omnis, placeat porro sit.
+    </li>
+    <li>Dicta dignissimos labore maiores omnis, pariatur placeat quasi quod quos
+        reprehenderit vero! Aut consectetur delectus dolorem enim eum, fugit quisquam!
+    </li>
+    <li class="special">Cum et perferendis quibusdam quis velit? Accusantium aliquam ea repellendus?
+        Aut
+        commodi dolore eligendi eos maxime quasi quidem sint voluptatem?
+    </li>
+</ul>
+
+<form name="myForm">
+    <input type="text" name="username" value="    " id="username">
+    <input type="password" name="password" value="123123" id="password">
+
+    <button id="button" class="special">Click me!</button>
+</form>
+
+<script>
+    var bodyElement = document.getElementsByTagName('body')[0];
+    // Change the body font color
+    bodyElement.style.color = '#444'; // Dark grey
+    bodyElement.style["background-color"] = "#fefefe"; // Very light grey
+    bodyElement.style.backgroundColor = "#f00"; // Very light grey
+    // We had to use [] syntax since the property name has a dash
+    bodyElement.style.fontFamily = "Helvetica, Verdana, Sans-Serif";
+    bodyElement.style["font-family"] = "Helvetica, Verdana, Sans-Serif";
+
+    document.forms[0].username.style.border = "20px solid yellow";
+
+    document.forms.myForm.password.style.fontFamily = "Ubuntu, sans-serif";
+    document.forms.myForm.password.style.fontSize = "3em";
+
+    console.log(document.forms[0].username); // username is the value of the name attribute
+    console.log(document.forms.myForm.password.value);
+    console.log(document.getElementsByTagName("form"));
+
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+
+    console.log(password.getAttribute("value"));  // will give you back it's original value
+    if (username.getAttribute("value") && username.getAttribute("value").trim() !== "") {
+        console.log("It has a value!");
+    } else {
+        console.log("It doesn't have a value")
+    }
+    if (password.getAttribute("value")) {
+        console.log("It has a value!");
+    } else {
+        console.log("It doesn't have a value")
+    }
+
+    password.setAttribute("value", "default");
+
+    console.log(password.getAttribute("value"));
+    console.log(password.value);
+
+    var title = document.getElementById("page-title");
+    title.innerHTML = "Hello <em>Redwood</em>!";
+
+    var button = document.getElementById("button");
+    button.innerHTML = "<strong>" + button.innerHTML + "</strong>"
+
+    var items = document.getElementsByTagName("li");
+    for (var i = 0; i < items.length; i++) {
+        if (i % 2 === 0) {
+            items[i].innerText = i;
+        }
+    }
+    //items.forEach() // Cannot be done because items is an HTMLCollection, not an array
+
+    var specialElements = document.getElementsByClassName("special"); // HTMLCollection
+    for (i = 0; i < specialElements.length; i++) {
+        console.log(specialElements[i].getAttribute("class"));
+        console.log(specialElements[i].innerText)
+        if (specialElements[i].hasAttribute("id")) {
+            console.log(specialElements[i].getAttribute("id"));
+        }
+    }
+
+    // prevent the user from sending a form if there's no value for either username or password
+
+    console.log(items);
+</script>
+</body>
+</html>
