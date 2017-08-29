@@ -20,20 +20,56 @@
         (function(){
             "use strict";
 
+            var address = "Geekdom";
+            var home = { lat: 19.4064, lng: -102.0430 };
+
+            var codeup = { lat: 29.426791, lng: -98.489602 };
+
+
             // Set our map options
             var mapOptions = {
                 // Set the zoom level
-                zoom: 11,
+                zoom: 5,
 
                 // This sets the center of the map at our location
-                center: {
-                    lat:  29.426791,
-                    lng: -98.489602
-                }
+                center: codeup,
+                mapTypeId: "roadmap"
             };
-             console.log(google);
+
+            var geocoder = new google.maps.Geocoder();
+
+//            geocoder.geocode(
+//                { "address": address }, function(results, status) {
+//
+//                // Check for a successful result
+//                if (status == google.maps.GeocoderStatus.OK) {
+//
+//                    console.log(results);
+//
+//                    // Recenter the map over the address
+//                    map.setCenter(results[0].geometry.location);
+//                } else {
+//
+//                    // Show an error message with the status if our request fails
+//                    alert("Geocoding was not successful - STATUS: " + status);
+//                }
+//            });
+
 
             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: codeup,
+                map: map
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: "<a href='#'>Changing</a> the world, one programmer at a time."
+            });
+
+            infowindow.open(map, marker);
+
+
 
         })();
     </script>
