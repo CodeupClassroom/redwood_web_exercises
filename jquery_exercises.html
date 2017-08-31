@@ -4,20 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="js/jquery-2.2.4.min.js"></script>
-    <script>
-        "use strict";
-
-        // Hoisting -> Move all definitions to the top (both variables and functions)
-        $(document).ready(changeTextOnParagraphAndTitle);
-
-        // Signature
-        function changeTextOnParagraphAndTitle() /*: void (undefined) */ {
-            var h1 = document.querySelector("h1");  //null
-            h1.innerText = "changed!!!";
-            var p = document.querySelector("p");  //null
-            p.innerText = "new content!!!";
-        }
-    </script>
+    <script src="js/document-ready.js"></script>
 </head>
 <body>
 
