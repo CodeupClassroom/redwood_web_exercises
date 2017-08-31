@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 50%;
+            height: 500px;
+            background-color: #3B94D9;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box" class="hovers"></div>
+
+<p class="hovers">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at culpa cupiditate delectus ea, eaque eligendi esse illo, impedit mollitia non nulla porro sed similique, sit veniam voluptas voluptate. Ipsa.</p>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script>
+
+    (function(){
+
+        var box = $("#box");
+
+        box.click(function(){
+            $(this).css("background-color", "red");
+        });
+
+        var changeToBlue = function(){
+            $(this).css("background-color", "#3B94D9");
+        };
+
+        box.dblclick(changeToBlue());
+
+        var hoverOut = function(){
+            $(this).css("background-color", "green");
+        };
+
+        // This hover function requires two anon functions just for lecture purposes i will use one way for each but it's better to keep using one, either vars for them or functions on the fly.
+        box.hover(function(){
+            $(this).css("background-color", "red");
+        }, hoverOut);
+
+    })();
+
+</script>
+
+</body>
+</html>
