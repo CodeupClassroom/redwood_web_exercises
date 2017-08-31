@@ -297,6 +297,15 @@ A generalization to create layouts based on columns
 1. Refresh your page
 1. Use the button "Step over" to move between lines
 
+## Semantic versioning
+
+In simple words
+
+* `1.2.3` -> `major.minor.patch`
+   * major. New stuff yay! Old stuff might not work as before, careful!!!
+   * minor. New stuff, yay!
+   * patch. Sorry my bad
+
 ## Resources
 
 ### For typing and shortcuts
