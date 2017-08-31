@@ -3,25 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script>
-        "use strict";
-
-        // Hoisting -> Move all definitions to the top (both variables and functions)
-        $(document).ready(changeTextOnParagraphAndTitle);
-
-        // Signature
-        function changeTextOnParagraphAndTitle() /*: void (undefined) */ {
-            var h1 = document.querySelector("h1");  //null
-            h1.innerText = "changed!!!";
-            var p = document.querySelector("p");  //null
-            p.innerText = "new content!!!";
-        }
-    </script>
 </head>
 <body>
 
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet expedita laborum odio omnis quidem repudiandae. Esse facilis in iste placeat quas suscipit, voluptate? Atque, delectus dolorem modi nesciunt sit sunt?</h1>
+<h1 id="title">Main title</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores, beatae blanditiis consectetur consequuntur corporis culpa, distinctio dolor, doloribus ea eligendi eum exercitationem harum impedit labore minima molestiae nesciunt nobis odio omnis optio placeat porro quaerat quam quasi quidem quisquam rem repellendus sapiente similique tempore tenetur totam vel vitae voluptate!</p>
 
@@ -54,18 +39,31 @@
         nesciunt officia omnis optio possimus quae, quam quos repellat repellendus saepe sequi
         tempore vel voluptates? Facere, minima minus?
     </li>
-    <li>Aliquam at dolorum eligendi ex laboriosam natus odit ratione, sunt totam ut. At cupiditate
+    <li id="last-item">Aliquam at dolorum eligendi ex laboriosam natus odit ratione, sunt totam ut. At cupiditate
         ducimus enim excepturi labore natus, neque nisi quas tempora voluptas! A at culpa excepturi
         quidem similique.
     </li>
 </ul>
+
+<h1>Another title</h1>
 
 
 <!-- CDN jQuery library-->
 <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
 
 <!-- Local jQuery library-->
+<script src="js/jquery-2.2.4.min.js"></script>
+<script>
+    (function () {
+        $("li").css("font-size", "20px");
+        alert($("h1, p, li").css("background-color", "yellow"));
 
+        alert($("h1").text()); // document.querySelector("h1").innerText
+        // the text of all the elements is going to be concatenated
 
+        alert($("h1").html()); // document.querySelector("h1").innerHTML
+        // The HTML of the first element
+    })();
+</script>
 </body>
 </html>
