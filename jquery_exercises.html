@@ -3,22 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        "use strict";
+
+        // Hoisting -> Move all definitions to the top (both variables and functions)
+        $(document).ready(changeTextOnParagraphAndTitle);
+
+        // Signature
+        function changeTextOnParagraphAndTitle() /*: void (undefined) */ {
+            var h1 = document.querySelector("h1");  //null
+            h1.innerText = "changed!!!";
+            var p = document.querySelector("p");  //null
+            p.innerText = "new content!!!";
+        }
+    </script>
 </head>
 <body>
+
+<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet expedita laborum odio omnis quidem repudiandae. Esse facilis in iste placeat quas suscipit, voluptate? Atque, delectus dolorem modi nesciunt sit sunt?</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores, beatae blanditiis consectetur consequuntur corporis culpa, distinctio dolor, doloribus ea eligendi eum exercitationem harum impedit labore minima molestiae nesciunt nobis odio omnis optio placeat porro quaerat quam quasi quidem quisquam rem repellendus sapiente similique tempore tenetur totam vel vitae voluptate!</p>
+
+<ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis deleniti dicta
+        ducimus, error esse facere iure libero molestiae nisi quas quibusdam rem reprehenderit
+        sapiente sequi sunt ullam vitae voluptatem.
+    </li>
+    <li>Ad atque autem commodi, ducimus excepturi laborum porro tenetur! Ad adipisci amet blanditiis
+        doloremque expedita fuga fugit harum id maxime molestiae non nulla odio provident, quasi
+        quidem soluta sunt, voluptatibus?
+    </li>
+    <li>Adipisci deserunt dolore dolorem, iste obcaecati rem sit vel? Accusamus, accusantium
+        adipisci, aperiam deleniti doloribus eius incidunt inventore itaque necessitatibus possimus
+        provident ut! Deserunt ea est magni officiis unde voluptates?
+    </li>
+    <li>Eligendi fugit nostrum sit ut voluptate! Assumenda, deserunt illo minus mollitia nemo odit
+        omnis quibusdam, quo repellat, repellendus similique temporibus tenetur voluptatibus?
+        Consequatur dignissimos laudantium nulla odit similique veritatis voluptatem!
+    </li>
+    <li>Earum nulla qui ratione! Accusamus aliquid aspernatur aut consequatur consequuntur eius
+        esse, excepturi hic id impedit ipsum itaque iusto maiores modi nisi obcaecati placeat
+        possimus quis saepe sed tenetur voluptate?
+    </li>
+    <li>Adipisci beatae culpa cumque debitis error esse exercitationem facilis harum illum, in ipsam
+        iusto, labore molestiae odit officia officiis porro quam quasi repudiandae sunt tempora
+        tempore unde veniam voluptates voluptatum.
+    </li>
+    <li>Amet asperiores at deserunt eveniet incidunt inventore iste itaque laudantium minus nemo
+        nesciunt officia omnis optio possimus quae, quam quos repellat repellendus saepe sequi
+        tempore vel voluptates? Facere, minima minus?
+    </li>
+    <li>Aliquam at dolorum eligendi ex laboriosam natus odit ratione, sunt totam ut. At cupiditate
+        ducimus enim excepturi labore natus, neque nisi quas tempora voluptas! A at culpa excepturi
+        quidem similique.
+    </li>
+</ul>
 
 
 <!-- CDN jQuery library-->
 <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
 
 <!-- Local jQuery library-->
-<script src="js/jquery-2.2.4.min.js"></script>
 
-<script>
-    "use strict";
-    $(document).ready(function(){
-        alert("Hi there");
-    });
-</script>
 
 </body>
 </html>
