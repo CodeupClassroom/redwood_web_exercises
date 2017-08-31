@@ -45,6 +45,8 @@
     </li>
 </ul>
 
+<h1>Another title</h1>
+
 
 <!-- CDN jQuery library-->
 <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
@@ -53,11 +55,14 @@
 <script src="js/jquery-2.2.4.min.js"></script>
 <script>
     (function () {
-        alert($("#title").html()); // document.getElementById("title").innerHTML
-        // If there's more than one element on the selection when you call .html() you'll get
-        // the content of the first one
+        $("li").css("font-size", "20px");
+        alert($("h1, p, li").css("background-color", "yellow"));
 
-        alert($("#last-item").html());
+        alert($("h1").text()); // document.querySelector("h1").innerText
+        // the text of all the elements is going to be concatenated
+
+        alert($("h1").html()); // document.querySelector("h1").innerHTML
+        // The HTML of the first element
     })();
 </script>
 </body>
