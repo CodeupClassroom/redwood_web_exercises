@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet expedita laborum odio omnis quidem repudiandae. Esse facilis in iste placeat quas suscipit, voluptate? Atque, delectus dolorem modi nesciunt sit sunt?</h1>
+<h1 id="title">Main title</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores, beatae blanditiis consectetur consequuntur corporis culpa, distinctio dolor, doloribus ea eligendi eum exercitationem harum impedit labore minima molestiae nesciunt nobis odio omnis optio placeat porro quaerat quam quasi quidem quisquam rem repellendus sapiente similique tempore tenetur totam vel vitae voluptate!</p>
 
@@ -39,7 +39,7 @@
         nesciunt officia omnis optio possimus quae, quam quos repellat repellendus saepe sequi
         tempore vel voluptates? Facere, minima minus?
     </li>
-    <li>Aliquam at dolorum eligendi ex laboriosam natus odit ratione, sunt totam ut. At cupiditate
+    <li id="last-item">Aliquam at dolorum eligendi ex laboriosam natus odit ratione, sunt totam ut. At cupiditate
         ducimus enim excepturi labore natus, neque nisi quas tempora voluptas! A at culpa excepturi
         quidem similique.
     </li>
@@ -52,7 +52,13 @@
 <!-- Local jQuery library-->
 <script src="js/jquery-2.2.4.min.js"></script>
 <script>
+    (function () {
+        alert($("#title").html()); // document.getElementById("title").innerHTML
+        // If there's more than one element on the selection when you call .html() you'll get
+        // the content of the first one
 
+        alert($("#last-item").html());
+    })();
 </script>
 </body>
 </html>
