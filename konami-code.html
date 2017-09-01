@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Game</title>
+</head>
+<body>
+<header>
+    Username: Luis
+    Score: 1000
+    Life #: <span id="life">1</span>
+</header>
+
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"
+>
+</script>
+<script>
+    "use strict";
+
+    var konamiCode = [
+        38,
+        38,
+        40,
+        40,
+        37,
+        39,
+        37,
+        39,
+        66,
+        65,
+        13
+    ];
+    var i = 0;
+    var lives = parseInt($("#life").text());
+    // if the Konami code is correct
+    // I'll change the value of the element #life to 30, change the font color to green make it
+    // bold
+    // If the konami code is wrong I'll change the #life element font-color to gray, make it bold
+
+    $(document).keyup(function (event) {
+        if (event.keyCode !== konamiCode[i]) {
+            $("#life").css("color", "blue").css("font-weight", "bold");
+            i = 0;
+        } else {
+            i++;
+        }
+
+        // if the code is complete ?
+        if (konamiCode.length  === i) {
+            lives += 30;
+            $("#life").html(lives + " lives").css("color", "green").css("font-weight", "bold");
+            i = 0;
+        }
+    });
+</script>
+</body>
+</html>
