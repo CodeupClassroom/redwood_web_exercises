@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example jQuery Page</title>
+    <style>
+        .centered {
+            text-align: center;
+        }
+        .highlighted {
+            background-color: #FF0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Example Page</h1>
+
+<div class="centered important">
+    <h3>NOTICE</h3>
+    <p>This is an important message!</p>
+</div>
+
+<div class="not-important">
+    <h2>Lorem Ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
+</div>
+
+<p class="centered important">This is also very important.</p>
+
+<a href="#" id="highlight-important">Click to highlight important text.</a>
+
+<dl>
+    <dt>Programming language</dt>
+    <dd>It's a language to produce value using a computer</dd>
+</dl>
+
+
+<form action="#">
+    <label for="username">Username</label>
+    <input type="text" id="username" value="">
+    <span id="username-error"></span>
+    <button id="login">Login</button>
+</form>
+
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"
+>
+</script>
+<script>
+    $("#login").on("click", validateUsername);
+    function validateUsername(event) {
+        // submit buttons and links
+        event.preventDefault(); // Prevents the default behavior of the button (sending the form)
+
+        var username = $("#username").val(); // getter
+        if (username.trim() === "") {
+            $("#username-error")
+                .html("Username cannot be empty") // setters
+                .css("background-color", "red") // setters
+            ;
+        } else {
+            // with a form or submit button
+            $("form").submit();
+
+            // if it were a link
+            //location.href = $("a").attr("href");
+        }
+    }
+
+
+    var person = {
+        personName: "justin",
+        // I want it to behave as both, as a getter & as a setter
+        name: function (newName) {
+            // Setter
+            if (newName) {
+                this.personName = newName;
+            } else {
+                // getter
+                return this.personName;
+            }
+        }
+    }
+
+    console.log(person.name());  // getter
+    person.name("fernando"); // setter
+    console.log(person.name()) // getter
+
+    "use strict";
+    // get the name of a person -> getName()
+    var html = $(".not-important").html();  // getter, a method that returns the value of a property of an object
+    console.log(html);
+    // setter
+    //$(".not-important").html("<p>New content</p>");
+
+
+    $(".important").text();  // getter
+    //$(".important").text("New text");  // setter
+
+
+    console.log($(".centered").attr("class")); // getter
+    //console.log($(".centered").attr("class", "not-important")); // setter
+
+    console.log($("#highlight-important").css("color"));
+    $("#highlight-important").css("color", "yellow");
+
+    // Method chaining
+    $("h3")
+        .css("font-size", "2em") //setter
+        .css("color", "blue") //setter
+        .css("text-transform", "uppercase") //setter
+        .html("New content") //setter
+        .attr("class", "new-class")//setter
+        .attr("readonly", true)//setter
+    ;
+
+    $(".centered").css({
+            "font-size": "4em",
+            "color": "red",
+            "text-transform": "lowercase"
+        })
+        .html("new HTML content")
+        .attr("class", "super-important")
+    ;
+
+    $("#highlight-important").on("click", highlightImportantElements);
+    function highlightImportantElements() {
+        var $important = $(".important");
+        $important.toggleClass("highlighted");
+        /*if ($important.hasClass("highlighted")) {
+            $important.removeClass("highlighted");
+        } else {
+            $important.addClass("highlighted");
+        }*/
+    }
+
+</script>
+</body>
+</html>
