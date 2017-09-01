@@ -10,6 +10,8 @@
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores, beatae blanditiis consectetur consequuntur corporis culpa, distinctio dolor, doloribus ea eligendi eum exercitationem harum impedit labore minima molestiae nesciunt nobis odio omnis optio placeat porro quaerat quam quasi quidem quisquam rem repellendus sapiente similique tempore tenetur totam vel vitae voluptate!</p>
 
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloribus facere magnam minima! Aspernatur commodi, consectetur consequatur debitis ea est exercitationem, in mollitia odio officiis omnis quo saepe voluptas, voluptatem.</p>
+
 <ul>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis deleniti dicta
         ducimus, error esse facere iure libero molestiae nisi quas quibusdam rem reprehenderit
@@ -55,14 +57,22 @@
 <script src="js/jquery-2.2.4.min.js"></script>
 <script>
     (function () {
-        $("li").css("font-size", "20px");
-        alert($("h1, p, li").css("background-color", "yellow"));
 
-        alert($("h1").text()); // document.querySelector("h1").innerText
-        // the text of all the elements is going to be concatenated
+       $("#title").click(function(){
+            $(this).css("background-color", "blue");
+       });
 
-        alert($("h1").html()); // document.querySelector("h1").innerHTML
-        // The HTML of the first element
+       var ps = $("p");
+
+       ps.dblclick(function(){
+            $(this).css("font-size", "18px");
+       });
+
+       var listOfLi = $("li");
+
+       listOfLi.hover(function(){ $(this).css("color", "red"); }, function(){ $(this).css("color", "black"); });
+
+
     })();
 </script>
 </body>
