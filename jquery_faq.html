@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQS</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>FAQ about national parks</h1>
+<button id="showAnswers" href="">Show answers</button>
+
+<dl>
+    <dt> Can I drink alcohol in a state park?</dt>
+    <dd class="invisible">It is against park rules to drink or display an alcoholic beverage in a public place at any
+        time. All outdoor areas are public in a state park. Also, we cannot sell alcoholic beverages within a state
+        park.
+        <a href="">Refer to Texas State Park Regulations 59.134 (b). </a></dd>
+
+    <dt>Can I ride my bike in state parks?</dt>
+    <dd class="invisible">Almost all state parks offer road or mountain biking, or both! Many parks have long stretches
+        of road (some winding and hilly). Many of our parks have multiuse trails. Visit our<a href=""> Biking page </a>for
+        detailed information
+    </dd>
+
+    <dt>Where can I go birding? Do you have a bird checklist?</dt>
+    <dd class="invisible">You can bird at any state park! For a short list of great parks for birding, visit our Birding
+        page. See a complete list of Bird Checklists on our Publications page. You might want to check out the Great
+        Texas Wildlife Trails, which list places to see wildlife around the state, including in state parks.
+    </dd>
+
+    <dt>Which state parks were built by the Civilian Conservation Corps (CCC)?</dt>
+    <dd class="invisible"><a href="">Go to our <a href="">CCC web page</a> for more information. </a></dd>
+
+    <dt>Can I bring my pet to a state park?</dt>
+    <dd class="invisible">You can bring your pets to almost all state parks! However, we do have some rules:
+        <ul>
+            <li>Pets must be on leash, in a car, or in a crate at all times. The leash can be no longer than 6 feet.
+            </li>
+            <li>You must be with your pet at all times. You may not leave your pet unattended in the park, in a vehicle,
+                or at your campsite.
+            </li>
+            <li>Do not bring a noisy or dangerous dog to a state park.</li>
+            <li>Pets are not allowed in any state park buildings. This includes motels, cabins, screened shelters, group
+                facilities and restrooms.
+            </li>
+        </ul>
+    </dd>
+
+    <dt>Can I fly a drone or other remote control aircraft in a state park?</dt>
+    <dd class="invisible">Two parks offer zones for flying remote controlled aircraft (including drones): <a href="">Lake
+        Whitney</a> and
+        <a href="">San Angelo.</a> You can request a filming permit for your craft at any park by contacting that park.
+        Allow several weeks for us to review your request.
+    </dd>
+
+    <dt> Is geocaching allowed in Texas State Parks?</dt>
+    <dd class="invisible">Yes! Almost every state park has at least one geocache. Learn more about geocaching on our <a
+            href="">Geocaching page.</a></dd>
+
+    <dt>May I carry my handgun into a state park when I am traveling?</dt>
+    <dd class="invisible">Our rules state that you may not show/display or fire your gun in a state park. If you have a
+        valid Handgun License, you may carry your handgun in many state parks. But even with a HL, handguns are not
+        allowed in parks that are leased from the federal government. Check with the park before you go. Refer to<a
+                href="">Texas State Park Regulations for specific regulations - 59.134(d).</a></dd>
+
+    <dt>Where can I find information on hiking at Texas State Parks?</dt>
+    <dd class="invisible">You can hike at most state parks! Check out our <a href="">Hikes & Nature Walks page</a>
+        for some ideas.
+    </dd>
+</dl>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script>
+    "use strict";
+    (function(){
+
+        $("#showAnswers").click(function(event){
+            $("dd").toggleClass("invisible");
+        });
+
+        $("dt").click(function(){
+            // Just for fun
+            //$("dt").css("background-color", "transparent");
+            $(this).css("background-color", "yellow");
+        });
+
+    })();
+</script>
+
+</body>
+</html>
