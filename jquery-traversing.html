@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>Empty</div>
+
+<div class="lists">
+    <ul id="techs">
+        <li>Linux</li>
+        <li>Apache</li>
+        <li>MySQL</li>
+        <li>PHP</li>
+        <li>Javascript</li>
+    </ul>
+
+
+    <ul id="techs2">
+        <li>JAVA</li>
+        <li>GROOVY</li>
+    </ul>
+
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Peach</li>
+    </ul>
+</div>
+
+<div class="lists">
+    <ul id="techs3">
+        <li>Scala</li>
+        <li>Kotlin</li>
+    </ul>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script>
+    "use strict";
+    (function(){
+
+        // Get me the div parent from the third list
+        var secondDiv = $("#techs3").parent();
+        console.log(secondDiv);
+
+        // Get the first div with the class lists
+        $("div.lists").first();
+
+        // Get the children from the second ul in the first div with the class lists
+        var res = $("div.lists").first().children().first().next();
+//        var res = $("div.lists").first().children().last().prev();
+        console.log(res);
+
+        // Get the list of fruits without adding an id or class on the html
+        var fruits = $("div.lists").first().children().last().children();
+        console.log("Fruits");
+        console.log(fruits);
+
+        // Loops inside the list of fruits [froot loops]
+        fruits.each(function(index, element){
+            console.log(index + " " + $(element).text());
+        });
+
+
+    })();
+</script>
+
+</body>
+</html>
