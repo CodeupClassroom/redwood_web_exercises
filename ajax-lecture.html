@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="data">
+
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script>
+    "use strict";
+    (function(){
+
+        // Star wars request
+
+        // This object is optional
+        var options = {
+            "type": "GET"
+        };
+
+        $.ajax("https://swapi.co/api/people/", options)
+            .done(function(data, status){
+                console.log(data);
+//                console.log(status);
+
+                data.results.forEach(function(el, i){
+                    console.log(el.name);
+                })
+
+
+
+
+            });
+
+        // Pokemon request
+        var request = $.ajax("http://pokeapi.co/api/v2/pokemon/1/");
+        request.done(showPokemonInformation);
+
+        function showPokemonInformation (pokemon) {
+            console.log(pokemon.name);
+            pokemon.abilities.forEach(function (ability) {
+                console.log(ability.ability.name);
+            });
+        }
+
+    })();
+</script>
+
+</body>
+</html>
