@@ -121,6 +121,8 @@
     </li>
 </ul>
 
+<button id="highlight">Highlight</button>
+
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -139,6 +141,43 @@
             //$("dt").css("background-color", "transparent");
             $(this).css("background-color", "yellow");
         });
+
+        $("#highlight").on("click", highlightAllLastListItems);
+
+        function highlightAllLastListItems () {
+            // `this` is the DOM element
+            // I want to apply the function `highlightLastListItem` to each `ul` element
+            $('ul').each(highlightLastListItem);
+        }
+
+        function highlightLastListItem () {
+            // `this` is each ul DOM element
+            $(this)  // me
+                .children()  // Select all my children elements
+                .last()
+                .css("background-color", "yellow")
+            ;
+        }
+
+        $("h3").on("click", makeAllListItemsBold);
+
+        function makeAllListItemsBold() {
+            $(this)
+                .next()  // ul
+                .children() // li (optional, if you make the ul bold, all list items will be bold too)
+                .css("font-weight", "bold")
+            ;
+        }
+
+        $("li").on("click", makeFirstSiblingBlue);
+        function makeFirstSiblingBlue() {
+            $(this) // li
+                .parent() // ul
+                .children() // li (siblings)
+                .first() // first list item
+                .css("color", "blue")
+            ;
+        }
 
     })();
 </script>
