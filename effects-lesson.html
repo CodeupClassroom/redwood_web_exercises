@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Effects lesson</title>
+</head>
+<body>
+<h1>Parks List</h1>
+
+<h3 id="national-parks-toggle">National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+
+<h3 id="state-parks-texas-toggle">State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"
+>
+</script>
+<script>
+    $("#national-parks-toggle").on("click", toggleParksList);
+    $("#state-parks-texas-toggle").on("click", toggleTexasParksList);
+    function toggleTexasParksList() {
+        var $list = $(this).next();  // ul
+
+        $list.slideToggle();
+
+        // accordion
+
+        /*if ($list.is(":visible")) {
+            $list.slideUp(); // hide
+        } else {
+            $list.slideDown(); // show
+        }*/
+
+        //$list.fadeToggle();
+
+        /*if ($list.is(":visible")) {
+            $list.fadeOut(); // hide
+        } else {
+            $list.fadeIn(); // show
+        }*/
+    }
+
+    function toggleParksList () {
+        var $list = $(this).next();  // ul
+        $list.toggle();
+        /*
+        if ($list.is(":visible")) {
+            $list.hide();
+        } else {
+            $list.show();
+        }
+        */
+    }
+</script>
+</body>
+</html>
