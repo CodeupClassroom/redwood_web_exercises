@@ -7,50 +7,97 @@
 <body>
 
 <div id="data">
-
+    Hello!
 </div>
 
 <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 
 <script>
     "use strict";
-    (function(){
+    (function () {
+
+        // HTTP -> For the Web
+        // HTTP Messages
+        // Request / Response
+        //   -> Header / Body
+
+        // This is the most important for the request
+        // URL, HTTP method (POST, GET, PUT, DELETE, PATCH, HEAD)
+
+        // The most important thing for the response
+        // Status code (status of response) 404 (Not found), 500 (Server errors), 200 (OK)
+        // Response body (Content type)
 
         // Star wars request
 
         // This object is optional
+        var request;
         var options = {
-            "type": "GET"
+            "type": "GET"  // HTTP method
         };
 
-        $.ajax("https://swapi.co/api/people/", options)
-            .done(function(data, status){
+        $.ajax("https://swapi.co/api/people/" /* URL */, options)
+            .done(function (data, status) {
                 console.log(data);
 //                console.log(status);
 
-                data.results.forEach(function(el, i){
+                data.results.forEach(function (el, i) {
                     console.log(el.name);
                 })
-
-
-
 
             });
 
         // Pokemon request
-        var request = $.ajax("http://pokeapi.co/api/v2/pokemon/1/");
-        request.done(showPokemonInformation);
+        var pokemonRequest = $.ajax("http://pokeapi.co/api/v2/pokemon/1/");
+        pokemonRequest.done(showPokemonInformation);
 
-        function showPokemonInformation (pokemon) {
+        // setInterval(callback); setTimeout(callback); Every callback has predefined signature
+        // addEventListener(callback)  callback(event); It receives an event
+        // forEach(callback); callback(item, index, array)
+
+        // done(callback) callback(response, status, jqXhr)
+        // fail(callback) callback(jqXhr, status, error)  callback(a, b, c)
+        // always(callback) callback()  // provide feedback to the user
+
+        function showPokemonInformation(pokemon) {
             console.log(pokemon.name);
             pokemon.abilities.forEach(function (ability) {
                 console.log(ability.ability.name);
             });
         }
 
+        //request = $.ajax("responses/message.txt");
+        //request = $.ajax("responses/list.html");
+        request = $.ajax("responses/person.json");
+        //request.done(showTextMessage);
+        request.done(buildList);
+        request.fail(onFailure);
+
+        function buildList(people) {
+            var ul = "<ul>";
+            people.forEach(function (person) {
+                ul += "<li>" + person.name + " " + person.lastName + "</li>";
+            });
+            ul += "</ul>";
+            appendList(ul);
+        }
+
+        function appendList(unorderedList) {
+            $("#data").append(unorderedList);
+        }
+
+        function showTextMessage(message) {
+            //console.log(response, status, jqXhr);
+            $("#data").html("<strong>" + message + "</strong>");
+        }
+
+        function onFailure(jqXhr, status, error) {
+            $("#data").html("<span style='color: red'>Opps!</span>")
+            //console.log(jqXhr, status, error);
+        }
     })();
 </script>
 
