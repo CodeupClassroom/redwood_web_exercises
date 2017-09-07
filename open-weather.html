@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Weather</title>
+</head>
+<body>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"
+    >
+    </script>
+    <script>
+        $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+            APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+            lat:    29.423017,
+            lon:   -98.48527,
+            units: "imperial",
+            cnt: 3
+        }).done(function(weather) {
+            var icon = weather.list[0].weather[0].icon;
+            var url = "http://openweathermap.org/img/w/" + icon + ".png"
+            var img = "<img src='" + url + "'>"
+            $('body').append(img);
+            console.log(url);
+        });
+    </script>
+</body>
+</html>
