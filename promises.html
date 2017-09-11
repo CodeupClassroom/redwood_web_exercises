@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises</title>
+</head>
+<body>
+
+<script>
+
+    "use strict";
+// jQuery ajax request example
+//    $.get("url", options).done().fail()
+
+    const getRandom = new Promise( (resolve, reject) => {
+
+        let rnd = Math.random();
+
+        if(rnd > 0.5){
+            // Provides an object as the response to the THEN method
+            resolve({rnd: rnd, msg:"resolved", status: "OK"});
+        }else{
+            reject(rnd);
+        }
+
+    });
+
+    // If the promise is resolved then...
+    getRandom.then( (response) => console.log(`we got the number ${response.rnd} - ${response.msg}`) );
+
+    // If the promise is rejected then you can catch the error
+    getRandom.catch( (number) => console.error(`The number is less than 0.5: ${number}`) );
+
+</script>
+
+</body>
+</html>
