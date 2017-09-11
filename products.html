@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products examples</title>
+</head>
+<body>
+<script>
+    // for loops, conditionals, temporary variables
+    var products = [
+        {
+            "title": "Hammer",
+            "quantity": 25,
+            "categories": [
+                "tool"
+            ],
+            "price": 20
+        }, {
+            "title": "Drill",
+            "quantity": 5,
+            "categories": [
+                "tool",
+                "powered"
+            ],
+            "price": 100
+        }, {
+            "title": "Mower",
+            "quantity": 5,
+            "categories": [
+                "tool",
+                "gas",
+                "outdoor"
+            ],
+            "price": 200
+        }, {
+            "title": "Screwdrivers",
+            "quantity": 25,
+            "categories": [
+                "tool"
+            ],
+            "price": 10
+        }
+    ];
+    console.log(products);
+    // get only the names of the products
+    /*let productTitles = []; // accumulator
+    for (let product of products) {
+        let title = extractTitle(product);
+        productTitles.push(title);
+    }*/
+    function extractTitle(product, option) {
+        return product.title;
+    }
+
+    //let productTitles = map(products, extractTitle);
+    let productTitles = products.map(extractTitle);
+    console.log(productTitles);
+
+    // get only the name and the price
+    /*let productAndPrices = [];
+    for (let product of products) {
+        let titleAndPrice = extractTitleAndPrice(product);
+        productAndPrices.push(titleAndPrice);
+    }*/
+    function extractTitleAndPrice(product) {
+        return {
+            product: product.title,
+            price: product.price
+        };
+    }
+
+    //let productAndPrices = map(products, extractTitleAndPrice);
+    let productAndPrices = products.map(extractTitleAndPrice);
+    console.log(productAndPrices);
+
+    function map(collection, callback) {
+        let newCollection = [];
+        for (let element of collection) {
+            let extractedValue = callback(element);
+            newCollection.push(extractedValue);
+        }
+        return newCollection;
+    }
+
+    // only the powered products
+    function isInPoweredCategory(product) {
+        return product.categories.indexOf("powered") >= 0;
+    }
+    //let onlyPoweredProducts = filter(products, isInPoweredCategory);
+    let onlyPoweredProducts = products.filter(isInPoweredCategory);
+    /*let onlyPoweredProducts = [];
+    for (let product of products) {
+        let condition = isInPoweredCategory(product);
+        if (condition) {
+            onlyPoweredProducts.push(product);
+        }
+    }*/
+    console.log(onlyPoweredProducts);
+    // only the products with a price less than 30
+    function costsLessThan30(product) {
+        return product.price < 30;
+    }
+    //let onlyProductsWithPriceLessThan30 = filter(products, costsLessThan30);
+    let onlyProductsWithPriceLessThan30 = products.filter(costsLessThan30);
+    /*let onlyProductsWithPriceLessThan30 = [];
+    for (let product of products) {
+        let condition = costsLessThan30(product);
+        if (condition) {
+            onlyProductsWithPriceLessThan30.push(product);
+        }
+    }*/
+    console.log(onlyProductsWithPriceLessThan30);
+
+    function filter(collection, callback) {
+        let filteredCollection = [];
+        for (let item of collection) {
+            let condition = callback(item);
+            if (condition) {
+                filteredCollection.push(item);
+            }
+        }
+        return filteredCollection;
+    }
+
+    // how many products we have in stock
+    function addQuantityToTotal(total, product) {
+        return total + product.quantity;
+    }
+    let total = 0;  // accumulator
+    for (let product of products) {
+        total = addQuantityToTotal(total, product);
+    }
+
+    function reduce(collection, callback, initialValue) {
+        let total = initialValue;
+        for (let item of collection) {
+            total = callback(total, item);
+        }
+        return total;
+    }
+    //total = reduce(products, addQuantityToTotal, 0);
+    total = products.reduce(addQuantityToTotal, 0);
+
+    console.log(total);
+
+    // chaining methods
+    // how many products in stock for a given category "tool"
+    let totalInStock = products
+        .filter(product => product.categories.indexOf("tool") >= 0)
+        .reduce((total, product) => total + product.quantity, 0)
+    ;
+    console.log(totalInStock);
+
+    /*$("ul")
+        .children() // map
+        .first() // filter
+        .text() // reduce
+    ;*/
+
+    totalInStock = 0;
+    for (let product of products) {
+        if (product.categories.indexOf("tool") >= 0) {
+            totalInStock = totalInStock + product.quantity;
+        }
+    }
+    console.log(totalInStock);
+
+    let ul = products.reduce(
+        (ul, product) => ul + `<li>${product.title}</li>`,
+        "<ul>"
+    );
+    console.log(ul + "</ul>")
+
+    // list of categories (no duplication)
+    // products -> ["tool", "powered", "gas", "outdoor"]
+    let categories = products
+        .map(product => product.categories)
+        .reduce((allCategories, productCategories) => allCategories.concat(productCategories), [])
+        .filter((category, index, categories) => categories.indexOf(category) === index )
+    ;
+    console.log(categories);
+
+    // Definition -> writing code
+    // Execution -> Substitution
+
+    function add(x = 5, y = 3) {
+        return x + y;
+        //return 5 + 3;
+    }
+
+    for (let number of [1, 2, 3, 4])
+        console.log(number, 3);
+
+        /*// number = 1
+        console.log(add(number, 3));
+        console.log(add(1, 3));
+        console.log(1 + 3);
+        console.log(4);
+
+        // number = 2
+        console.log(add(number, 3));
+        console.log(add(2, 3));
+        console.log(2 + 3);
+        console.log(5);
+
+        // number = 3
+        console.log(add(number, 3));
+        console.log(add(3, 3));
+        console.log(3 + 3);
+        console.log(6);
+*/
+
+    // from snake-case to CamelCase
+
+</script>
+</body>
+</html>
