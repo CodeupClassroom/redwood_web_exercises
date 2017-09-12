@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collections</title>
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous"
+    >
+</head>
+<body>
+<main class="container">
+    <header class="row">
+        <div class="col-xs-12">
+            <h1>Point of Sales</h1>
+        </div>
+    </header>
+    <section class="row add-to-cart">
+        <div class="col-xs-12 col-sm-6">
+            <form action="#">
+                <div class="form-group">
+                    <button type="button" class="btn btn-default btn-block" id="show-filter">
+                        <span class="glyphicon glyphicon-filter"></span>
+                        Filter products
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="product">Product</label>
+                    <select class="form-control" name="product" id="product"></select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input class="form-control" name="quantity" id="quantity">
+                </div>
+                <button type="button" class="btn btn-primary btn-block">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    Add to cart
+                </button>
+            </form>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <p><strong>Your shopping cart</strong></p>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <td>Product</td>
+                    <td>Unit Price</td>
+                    <td>Quantity</td>
+                    <td>Total</td>
+                </tr>
+                </thead>
+                <tbody id="shopping-cart"></tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right">
+                        Grand total
+                    </td>
+                    <td id="total"></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    <section class="filter">
+        <div class="modal fade" tabindex="-1" role="dialog" id="filter-modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">
+                            <span class="glyphicon glyphicon-filter"></span>
+                            Product Filters
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select class="form-control" name="category" id="category">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">With price less than</label>
+                            <input class="form-control" name="price" id="price">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">With name like</label>
+                            <input class="form-control" name="name" id="name">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary" id="apply-filter">
+                            <span class="glyphicon glyphicon-filter"></span>
+                            Filter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"
+>
+</script>
+<script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"
+>
+</script>
+<script>
+    var products = [
+        {
+            "title": "Hammer",
+            "quantity": 25,
+            "categories": [
+                "tool"
+            ],
+            "price": 20
+        }, {
+            "title": "Drill",
+            "quantity": 5,
+            "categories": [
+                "tool",
+                "powered"
+            ],
+            "price": 100
+        }, {
+            "title": "Mower",
+            "quantity": 5,
+            "categories": [
+                "tool",
+                "gas",
+                "outdoor"
+            ],
+            "price": 200
+        }, {
+            "title": "Screwdrivers",
+            "quantity": 25,
+            "categories": [
+                "tool"
+            ],
+            "price": 10
+        }
+    ];
+
+    var shoppingCart = [];
+
+    $("#show-filter").on("click", function () {
+        $("#filter-modal").modal('show');
+    });
+
+    // Get only the product name (for the select)
+
+    // Get both the name and the price (for the shopping cart)
+
+</script>
+</body>
+</html>

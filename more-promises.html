@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More promises</title>
+</head>
+<body>
+<script>
+    function practiceCoding(/* callback (function )*/ nextAction) {
+        console.log("I'm practicing wrting code...");
+        nextAction(); // synchronization
+    }
+
+    function practiceShortcuts(/* callback (function )*/ nextThingToDo) {
+         console.log("I'm practicing the refactoring shortcuts");
+        nextThingToDo();
+    }
+
+    function readNextLesson(/* callback (function )*/ next) {
+        console.log("I'm reading the next lesson");
+        next();
+    }
+
+    // 3 things
+    // Callback hell
+    practiceCoding(function() {
+        practiceShortcuts(function () {
+            readNextLesson(function () {
+                console.log("yay! I completed everything!");
+            });
+        });
+    });
+
+</script>
+</body>
+</html>
