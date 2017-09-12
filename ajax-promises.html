@@ -29,17 +29,50 @@
     }
 
 
-    get('https://appi.github.com/users')
-        .then(appendLinksToGithubUsers)
+    //get('https://appi.github.com/users')
+    fetch('https://api.github.com/users')
+        .then((response) => response.json()) // this returns a new promise
+        .then(appendLinksToGithubUsers) // this finally gets the JSON response
+        .catch(handleAjaxError)
+    ;
+
+    fetch('https://api.bitbucket.org/2.0/repositories')
+        .then((response) =>  response.json())
+        .then(
+            (repositories) => {
+                /*repositories.values.forEach(
+                    (repository) => console.log(repository.name)
+                )*/
+                for (let repository of repositories.values) {
+                    console.log(repository.name)
+                }
+            }
+        )
         .catch(handleAjaxError)
     ;
 
     /*Promise.all([
-        get('https://api.github.com/users'),
-        get('https://api.github.com/repositories')
-    ]).then().catch();*/
+        fetch('https://api.github.com/users'),
+        fetch('https://api.bitbucket.org/2.0/repositories')
+    ])
+        .then((responses) => {
+            for (let response of responses ) {
+                response
+                    .json()
+                    .then((jsonResponse) => console.log(jsonResponse))
+                ;
+            }
 
+            /!*responses.forEach((response) => {
+                response
+                    .json()
+                    .then((jsonResponse) => console.log(jsonResponse))
+                ;
+            });*!/
+        })
+        .catch(handleAjaxError);
 
+*/
     function handleAjaxError(message) {
         console.error(message);
     }
