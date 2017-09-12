@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises with AJAX calls</title>
+</head>
+<body>
+<ul id="users">
+
+</ul>
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"
+>
+</script>
+<script>
+
+    function get(url) {
+        return new Promise(function (resolve, reject) {
+            let request = $.ajax(url);
+
+            request.done((response) => resolve(response));
+
+            request.fail(
+                (jqXhr, status, error) => reject(`${status}: ${error}`)
+            );
+        });
+    }
+
+
+    get('https://appi.github.com/users')
+        .then(appendLinksToGithubUsers)
+        .catch(handleAjaxError)
+    ;
+
+    /*Promise.all([
+        get('https://api.github.com/users'),
+        get('https://api.github.com/repositories')
+    ]).then().catch();*/
+
+
+    function handleAjaxError(message) {
+        console.error(message);
+    }
+
+    function appendLinksToGithubUsers(users) {
+        let listItems = users
+            .map(user => `<li>${user.login}</li>`)  // string[]
+            .reduce((listItems, li) => listItems + li, "") // string
+        ;
+        $("#users").html(listItems);
+    }
+
+</script>
+</body>
+</html>
