@@ -6,30 +6,53 @@
 </head>
 <body>
 <script>
-    function practiceCoding(/* callback (function )*/ nextAction) {
-        console.log("I'm practicing wrting code...");
-        nextAction(); // synchronization
+    function practiceCoding() {
+        console.log("I'm practicing writing code...");
+        setTimeout(
+            () => {},
+            2000
+        );
     }
-
-    function practiceShortcuts(/* callback (function )*/ nextThingToDo) {
-         console.log("I'm practicing the refactoring shortcuts");
-        nextThingToDo();
+    function practiceShortcuts() {
+        console.log("I'm practicing the refactoring shortcuts");
+         setTimeout(
+             () => {},
+             3000
+         );
     }
-
-    function readNextLesson(/* callback (function )*/ next) {
+    function readNextLesson() {
         console.log("I'm reading the next lesson");
-        next();
+        setTimeout(
+            () => {},
+            1500
+        );
     }
 
-    // 3 things
-    // Callback hell
-    practiceCoding(function() {
-        practiceShortcuts(function () {
-            readNextLesson(function () {
-                console.log("yay! I completed everything!");
-            });
-        });
+    let ifPracticedCoding = new Promise(function (resolve) {
+        practiceCoding();
+        reject();
     });
+    let ifPracticeShortcuts = new Promise(function (resolve) {
+        practiceShortcuts();
+        resolve();
+    });
+    let ifReadNextLesson = new Promise(function (resolve) {
+        readNextLesson();
+        resolve();
+    });
+
+    ifPracticedCoding
+        .then(() => ifPracticeShortcuts)
+        .then(() => ifReadNextLesson)
+        .then(() => console.log("yay, i completed all!"))
+        .catch(() => console.error("something went wrong"))
+    ;
+
+    /*Promise.all([
+        ifPracticedCoding,
+        ifPracticeShortcuts,
+        ifReadNextLesson
+    ]).then(() => console.log("yay, i completed all!"));*/
 
 </script>
 </body>
