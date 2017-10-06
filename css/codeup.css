@@ -1,0 +1,174 @@
+/* Base */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Abel', sans-serif;
+}
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+/* Blocks */
+.sm-left {
+    float: left;
+}
+.sm-right {
+    float: right;
+}
+.selected-work {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+}
+.circular {
+    height: 105px;
+    width: 105px;
+    border-radius: 50%;
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+    margin: 0 auto;
+}
+.circular-small {
+    box-sizing: border-box;
+    padding: 2px;
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    font-size: .8em;
+    line-height: .8em;
+    color: #000;
+}
+.featured-text {
+    line-height: 2em;
+}
+.design {
+    background-color: #e6563b;
+    border: 5px solid #fff;
+}
+.develop {
+    background-color: #F0A300;
+    border: 5px solid #fff;
+}
+.host {
+    background-color: #00aba9;
+    border: 5px solid #fff;
+}
+.support {
+    background-color: #7cb06c;
+    border: 5px solid #fff;
+}
+
+/* Modules */
+.main-nav {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+.brand-logo {
+    background-color: white;
+    height: 70px;
+    margin-top: 2em;
+}
+.brand-name {
+    font-size: 2em;
+    margin-top: 1em;
+}
+.logo {
+    position: relative;
+    bottom: 15px;
+}
+.brand-link {
+    display: inline-block;
+    margin-right: 1em;
+    text-transform: uppercase;
+}
+.post {
+    margin-bottom: 2em;
+}
+.post-title {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Small devices and up */
+@media screen and (min-width: 768px) {
+    .services {
+        margin-top: 2em;
+    }
+    .brand-right {
+        position: relative;
+        bottom: 7.5em;
+        left: 5em;
+    }
+    .brand-left {
+        position: relative;
+        bottom: 7.5em;
+        right: 4em;
+    }
+    .sm-right,
+    .sm-left {
+        float: none;
+    }
+    .sm-clearfix {
+        clear: left;
+    }
+}
+
+/* Medium devices and up */
+@media screen and (min-width: 992px) {
+    .container-lg {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    .main-navbar {
+        margin-top: 1.2em;
+        height: 70px;
+        background-color: white;
+        margin-bottom: 4em;
+    }
+    .main-nav {
+        position: relative;
+        bottom: 3em;
+        max-width: 1170px;
+    }
+    .brand-link {
+        float: right;
+        line-height: 155px;
+        position: static;
+        margin-right: 3em;
+    }
+    .brand-name {
+        float: left;
+        position: static;
+        margin-left: 1em;
+        line-height: 100px;
+    }
+    .brand-logo {
+        float: left;
+        margin-left: 2em;
+        background-color: transparent;
+    }
+    .logo {
+        position: static;
+    }
+    .md-left {
+        float: left;
+    }
+    .md-right {
+        float: right;
+    }
+    .brand-title {
+        clear: both;
+    }
+    .selected-work {
+        text-align: left;
+    }
+}

@@ -2,82 +2,233 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Codeup Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/codeup-design.css">
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous"
+    >
+    <link href="https://fonts.googleapis.com/css?family=Abel|Anton" rel="stylesheet">
+    <link rel="stylesheet" href="css/codeup.css">
+    <title>Codeup design</title>
 </head>
 <body>
-
-<div class="container">
-
-    <div id="main-logo" class="row">
-        <div id="logo-background"></div>
-        <div id="logo-container" class="col-xs-9 col-xs-offset-4">
-            <img id="logo" src="assets/logo.png" class="img-responsive" alt="">
-        </div>
-    </div>
-
-    <div id="header-title" class="row">
-        <h3 class="col-xs-12">Codeup design</h3>
-    </div>
-
-    <div class="row">
-        <nav class="col-xs-12">
+<header>
+    <nav class="main-navbar">
+        <section class="container-lg">
             <ul class="main-nav">
-                <li class="menu-item"><a href="#">Services</a></li>
-                <li class="menu-item"><a href="#">Work</a></li>
-                <li class="menu-item"><a href="#">Blog</a></li>
-                <li class="menu-item"><a href="#">Contact</a></li>
+                <li class="nav-item brand-logo">
+                    <img class="circular logo" src="imgs/logo.png"/>
+                </li>
+                <li class="nav-item brand-name">codeup design</li>
+                <li class="nav-item brand-link brand-left">Services</li>
+                <li class="nav-item brand-link brand-left">Work</li>
+                <li class="nav-item brand-link brand-right">Blog</li>
+                <li class="nav-item brand-link brand-right">Contact</li>
             </ul>
-        </nav>
-    </div>
-
+        </section>
+    </nav>
+    <section class="container">
+        <h1 class="brand-title">Visual design & Web development</h1>
+        <h3>From Park City, Utah</h3>
+        <section class="services">
+            <div class="row">
+                <div class="col-xs-6 col-sm-offset-2 col-sm-2">
+                    <p class="circular design sm-right md-right">Design</p>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <p class="circular develop sm-left">Develop</p>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <p class="circular support sm-right">Support</p>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <p class="circular host sm-left md-left">Host</p>
+                </div>
+            </div>
+        </section>
+    </section>
+</header>
+<main class="container">
     <div class="row">
-        <h1 class="col-xs-12">Visual design & web development</h1>
-    </div>
-
-    <div class="row">
-        <h1 class="col-xs-12">From San Antonio, Texas</h1>
-    </div>
-
-    <div id="circles" class="row">
-        <div class="circle">DESIGN</div>
-        <div class="circle">DEVELOP</div>
-        <div class="circle">SUPPORT</div>
-        <div class="circle">HOST</div>
-    </div>
-
-    <div class="row">
-        <h3>SELECTED WORK</h3>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12">
-            <img src="/assets/images/apple-ipad.jpg" alt="">
+        <div class="col-xs-12 col-md-8">
+            <div class="col-xs-12">
+                <div class="col-xs-12">
+                    <p class="selected-work">Selected work</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12">
+                    <img
+                        class="center-block img-responsive img-thumbnail"
+                        src="imgs/apple-ipad.jpg"
+                        alt="Featured site"
+                    >
+                </div>
+                <div class="col-xs-6 text-left">
+                    <p class="featured-text">Featured project</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <span class="circular circular-small design">D</span>
+                    <span class="circular circular-small develop">D</span>
+                    <span class="circular circular-small support">S</span>
+                    <span class="circular circular-small host">H</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12">
+                    <img
+                        class="center-block img-responsive img-thumbnail"
+                        src="imgs/macbook.jpg"
+                        alt="Featured site"
+                    >
+                </div>
+                <div class="col-xs-6 text-left">
+                    <p class="featured-text">Featured project</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <span class="circular circular-small design">D</span>
+                    <span class="circular circular-small develop">D</span>
+                    <span class="circular circular-small support">S</span>
+                    <span class="circular circular-small host">H</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 sm-clearfix">
+                <div class="col-xs-12">
+                    <img
+                        class="center-block img-responsive img-thumbnail"
+                        src="imgs/man.jpg"
+                        alt="Featured site"
+                    >
+                </div>
+                <div class="col-xs-6 text-left">
+                    <p class="featured-text">Featured project</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <span class="circular circular-small design">D</span>
+                    <span class="circular circular-small develop">D</span>
+                    <span class="circular circular-small support">S</span>
+                    <span class="circular circular-small host">H</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12">
+                    <img
+                        class="center-block img-responsive img-thumbnail"
+                        src="imgs/security.jpg"
+                        alt="Featured site"
+                    >
+                </div>
+                <div class="col-xs-6 text-left">
+                    <p class="featured-text">Featured project</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <span class="circular circular-small design">D</span>
+                    <span class="circular circular-small develop">D</span>
+                    <span class="circular circular-small support">S</span>
+                    <span class="circular circular-small host">H</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12">
+                <div class="col-xs-12">
+                    <p class="selected-work">Latest posts</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-12">
+                <div class="col-xs-12 post">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img
+                                    class="media-object"
+                                    src="http://lorempixel.com/50/50"
+                                    alt="post"
+                                >
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading post-title">
+                                The admin bar and absolute positioning
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 post">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img
+                                    class="media-object"
+                                    src="http://lorempixel.com/50/50"
+                                    alt="post"
+                                >
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading post-title">Nibler Awesome Web Testing</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 post">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img
+                                    class="media-object"
+                                    src="http://lorempixel.com/50/50"
+                                    alt="post"
+                                >
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading post-title">
+                                How to get Google to like you
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-12">
+                <div class="col-xs-12 post">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img
+                                    class="media-object"
+                                    src="http://lorempixel.com/32/32"
+                                    alt="post"
+                                >
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h6 class="media-heading post-title">Last tweet</h6>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque
+                        dolor dolorum eligendi eum exercitationem fugit iste magni, mollitia nihil
+                        obcaecati optio placeat quasi, reiciendis repudiandae ullam velit veritatis
+                        voluptatibus!
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-xs-6">
-            <h3>FEATURED PRODUCT</h3>
-        </div>
-        <div class="col-xs-6">
-            <div class="col-xs-3">D</div>
-            <div class="col-xs-3">D</div>
-            <div class="col-xs-3">S</div>
-            <div class="col-xs-3">H</div>
-        </div>
-    </div>
-
-</div>
-
+</main>
 <script
-        src="http://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"
 >
 </script>
-<script src="js/bootstrap.min.js"></script>
+<script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"
+>
+</script>
 </body>
 </html>
